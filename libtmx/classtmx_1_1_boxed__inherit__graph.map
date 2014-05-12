@@ -1,0 +1,6 @@
+<map id="tmx::Boxed" name="tmx::Boxed">
+<area shape="rect" id="node7" href="$classtmx_1_1_ellipse.html" title="An ellipse is a geometrical object. " alt="" coords="5,254,96,287"/>
+<area shape="rect" id="node9" href="$classtmx_1_1_rectangle.html" title="A rectangle is a geometrical object. " alt="" coords="120,254,229,287"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="67,89,157,122"/>
+<area shape="rect" id="node4" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="71,6,153,39"/>
+</map>

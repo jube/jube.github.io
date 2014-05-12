@@ -1,0 +1,6 @@
+<map id="tmx::Layer" name="tmx::Layer">
+<area shape="rect" id="node5" href="$classtmx_1_1_image_layer.html" title="An image layer is a layer with a single image. " alt="" coords="5,171,125,205"/>
+<area shape="rect" id="node7" href="$classtmx_1_1_object_layer.html" title="An object layer is a layers composed of objects. " alt="" coords="149,171,272,205"/>
+<area shape="rect" id="node9" href="$classtmx_1_1_tile_layer.html" title="A tile layer is a layer with tiles in cells. " alt="" coords="296,171,400,205"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="169,6,252,39"/>
+</map>

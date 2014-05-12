@@ -1,0 +1,5 @@
+<map id="tmx::Rectangle" name="tmx::Rectangle">
+<area shape="rect" id="node2" href="$classtmx_1_1_boxed.html" title="A boxed object is a geometrical object that is defined by a box. " alt="" coords="16,171,104,205"/>
+<area shape="rect" id="node4" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="15,89,105,122"/>
+<area shape="rect" id="node6" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="19,6,101,39"/>
+</map>
