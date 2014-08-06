@@ -1,0 +1,16 @@
+<map id="ui::Widget" name="ui::Widget">
+<area shape="rect" id="node2" href="$classui_1_1_bin.html" title="A widget with a single child. " alt="" coords="116,80,175,107"/>
+<area shape="rect" id="node4" href="$classui_1_1_container.html" title="A widget that contains several other widgets. " alt="" coords="216,80,312,107"/>
+<area shape="rect" id="node9" href="$classui_1_1_leaf.html" title="A leaf widget. " alt="" coords="383,80,449,107"/>
+<area shape="rect" id="node14" href="$classui_1_1_stack.html" title="A stack widget. " alt="" coords="575,80,649,107"/>
+<area shape="rect" id="node3" href="$classui_1_1_video_config_widget.html" title="A video configuration widget. " alt="" coords="5,155,157,181"/>
+<area shape="rect" id="node5" href="$classui_1_1_table.html" title="A table widget. " alt="" coords="181,155,253,181"/>
+<area shape="rect" id="node6" href="$classui_1_1_form.html" title="A form widget. " alt="" coords="86,229,157,256"/>
+<area shape="rect" id="node7" href="$classui_1_1_h_box.html" title="A horizontal box. " alt="" coords="181,229,254,256"/>
+<area shape="rect" id="node8" href="$classui_1_1_v_box.html" title="A vertical box. " alt="" coords="279,229,351,256"/>
+<area shape="rect" id="node10" href="$classui_1_1_button.html" title="A button widget. " alt="" coords="278,155,357,181"/>
+<area shape="rect" id="node11" href="$classui_1_1_label.html" title="A label widget. " alt="" coords="381,155,451,181"/>
+<area shape="rect" id="node12" href="$classui_1_1_select.html" title="A select widget. " alt="" coords="476,155,553,181"/>
+<area shape="rect" id="node13" href="$classui_1_1_toggle.html" title="A toggle widget. " alt="" coords="578,155,657,181"/>
+<area shape="rect" id="node15" href="$classui_1_1_area.html" title="An area on the window that contains widgets. " alt="" coords="681,155,748,181"/>
+</map>

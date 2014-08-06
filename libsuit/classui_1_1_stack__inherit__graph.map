@@ -1,0 +1,4 @@
+<map id="ui::Stack" name="ui::Stack">
+<area shape="rect" id="node3" href="$classui_1_1_area.html" title="An area on the window that contains widgets. " alt="" coords="13,155,79,181"/>
+<area shape="rect" id="node2" href="$classui_1_1_widget.html" title="An element of the graphical interface. " alt="" coords="5,5,87,32"/>
+</map>

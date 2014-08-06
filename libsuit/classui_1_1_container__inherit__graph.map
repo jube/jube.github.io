@@ -1,0 +1,7 @@
+<map id="ui::Container" name="ui::Container">
+<area shape="rect" id="node3" href="$classui_1_1_table.html" title="A table widget. " alt="" coords="101,155,173,181"/>
+<area shape="rect" id="node2" href="$classui_1_1_widget.html" title="An element of the graphical interface. " alt="" coords="96,5,177,32"/>
+<area shape="rect" id="node4" href="$classui_1_1_form.html" title="A form widget. " alt="" coords="5,229,76,256"/>
+<area shape="rect" id="node5" href="$classui_1_1_h_box.html" title="A horizontal box. " alt="" coords="100,229,173,256"/>
+<area shape="rect" id="node6" href="$classui_1_1_v_box.html" title="A vertical box. " alt="" coords="198,229,270,256"/>
+</map>

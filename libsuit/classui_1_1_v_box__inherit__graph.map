@@ -1,0 +1,5 @@
+<map id="ui::VBox" name="ui::VBox">
+<area shape="rect" id="node2" href="$classui_1_1_table.html" title="A table widget. " alt="" coords="17,155,89,181"/>
+<area shape="rect" id="node3" href="$classui_1_1_container.html" title="A widget that contains several other widgets. " alt="" coords="5,80,101,107"/>
+<area shape="rect" id="node4" href="$classui_1_1_widget.html" title="An element of the graphical interface. " alt="" coords="13,5,94,32"/>
+</map>

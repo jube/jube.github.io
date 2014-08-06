@@ -1,0 +1,7 @@
+<map id="ui::Leaf" name="ui::Leaf">
+<area shape="rect" id="node3" href="$classui_1_1_button.html" title="A button widget. " alt="" coords="5,155,84,181"/>
+<area shape="rect" id="node4" href="$classui_1_1_label.html" title="A label widget. " alt="" coords="108,155,179,181"/>
+<area shape="rect" id="node5" href="$classui_1_1_select.html" title="A select widget. " alt="" coords="203,155,281,181"/>
+<area shape="rect" id="node6" href="$classui_1_1_toggle.html" title="A toggle widget. " alt="" coords="305,155,384,181"/>
+<area shape="rect" id="node2" href="$classui_1_1_widget.html" title="An element of the graphical interface. " alt="" coords="152,5,233,32"/>
+</map>
