@@ -1,6 +1,6 @@
 <map id="tmx::PolyBase" name="tmx::PolyBase">
-<area shape="rect" id="node7" href="$classtmx_1_1_polygon.html" title="A polygon is a closed set of lines. " alt="" coords="5,254,104,287"/>
-<area shape="rect" id="node9" href="$classtmx_1_1_polyline.html" title="A polyline is an open set of lines. " alt="" coords="128,254,227,287"/>
-<area shape="rect" id="node2" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="71,89,161,122"/>
-<area shape="rect" id="node4" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="75,6,157,39"/>
+<area shape="rect" id="node4" href="$classtmx_1_1_polygon.html" title="A polygon is a closed set of lines. " alt="" coords="5,229,104,256"/>
+<area shape="rect" id="node5" href="$classtmx_1_1_polyline.html" title="A polyline is an open set of lines. " alt="" coords="128,229,227,256"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="71,80,161,107"/>
+<area shape="rect" id="node3" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="75,5,157,32"/>
 </map>

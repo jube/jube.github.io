@@ -1,4 +1,4 @@
 <map id="tmx::ObjectLayer" name="tmx::ObjectLayer">
-<area shape="rect" id="node2" href="$classtmx_1_1_layer.html" title="A layer is a layer in the whole map. " alt="" coords="25,89,108,122"/>
-<area shape="rect" id="node4" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="25,6,108,39"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_layer.html" title="A layer is a layer in the whole map. " alt="" coords="25,80,109,107"/>
+<area shape="rect" id="node3" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="25,5,108,32"/>
 </map>

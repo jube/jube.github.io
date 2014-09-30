@@ -1,5 +1,5 @@
 <map id="tmx::Polyline" name="tmx::Polyline">
-<area shape="rect" id="node2" href="$classtmx_1_1_poly_base.html" title="A &quot;polybase&quot; is a base class for lines with multiple points. " alt="" coords="5,171,112,205"/>
-<area shape="rect" id="node4" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="13,89,104,122"/>
-<area shape="rect" id="node6" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="17,6,100,39"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_poly_base.html" title="A &quot;polybase&quot; is a base class for lines with multiple points. " alt="" coords="5,155,113,181"/>
+<area shape="rect" id="node3" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="14,80,105,107"/>
+<area shape="rect" id="node4" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="18,5,101,32"/>
 </map>
