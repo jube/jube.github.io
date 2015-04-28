@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -42,11 +42,11 @@
 <div class="title">How to render image objects with libtmx? </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>An image object is an image that is part of an object layer in Tiled. This image is associated with a tile in a tileset. It is represented by a <a class="el" href="classtmx_1_1_tile_object.html" title="A tile object is an image put in the map. ">tmx::TileObject</a> in the library. This tutorial provides some hints on how to render this type of object in a neutral way, You should read <a class="el" href="tile_rendering.html">How to render tiles with libtmx?</a> before reading this tutorial as the first step is the same.</p>
+<div class="textblock"><p>An image object is an image that is part of an object layer in Tiled. This image is associated with a tile in a tileset. It is represented by a <code><a class="el" href="classtmx_1_1_tile_object.html" title="A tile object is an image put in the map. ">tmx::TileObject</a></code> in the library. This tutorial provides some hints on how to render this type of object in a neutral way, You should read <a class="el" href="tile_rendering.html">How to render tiles with libtmx?</a> before reading this tutorial as the first step is the same.</p>
 <h2>Visit the layer</h2>
 <p>We visit the object layer.</p>
-<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> visitObjectLayer(<a class="code" href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a> &amp;layer)<span class="keyword"> override </span>{</div>
-<div class="line">  <span class="keywordflow">if</span> (!layer.<a class="code" href="classtmx_1_1_layer.html#a752da0994b6280640dedf393a7b2e710">isVisible</a>()) {</div>
+<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> visitObjectLayer(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a> &amp;layer)<span class="keyword"> override </span>{</div>
+<div class="line">  <span class="keywordflow">if</span> (!layer.<a class="code" href="classtmx_1_1_layer.html#ae317c1c871f6fc034bea58c515b45dd0">isVisible</a>()) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="line"></div>
@@ -55,13 +55,13 @@
 <div class="line">      <span class="keywordflow">continue</span>;</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">auto</span> tile = <span class="keyword">static_cast&lt;</span><a class="code" href="classtmx_1_1_tile_object.html">tmx::TileObject</a> *<span class="keyword">&gt;</span>(obj);</div>
+<div class="line">    <span class="keyword">auto</span> tile = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classtmx_1_1_tile_object.html">tmx::TileObject</a> *<span class="keyword">&gt;</span>(obj);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">unsigned</span> x = tile-&gt;getX();</div>
 <div class="line">    <span class="keywordtype">unsigned</span> y = tile-&gt;getY();</div>
 <div class="line">    <span class="keywordtype">unsigned</span> gid = tile-&gt;getGID();</div>
 <div class="line"></div>
-<div class="line">    drawObjectGID(x, y, gid);</div>
+<div class="line">    drawObjectGID(map, x, y, gid);</div>
 <div class="line">  }</div>
 <div class="line"></div>
 <div class="line">}</div>
@@ -73,7 +73,7 @@
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

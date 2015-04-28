@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -65,9 +65,9 @@
 <div class="dynheader">
 Inheritance diagram for tmx::Tile:</div>
 <div class="dyncontent">
-<div class="center"><img src="classtmx_1_1_tile__inherit__graph.png" border="0" usemap="#tmx_1_1_tile_inherit__map" alt="Inheritance graph"/></div>
+<div class="center"><img src="classtmx_1_1_tile__inherit__graph.png:gd" border="0" usemap="#tmx_1_1_tile_inherit__map" alt="Inheritance graph"/></div>
 <map name="tmx_1_1_tile_inherit__map" id="tmx_1_1_tile_inherit__map">
-<area shape="rect" id="node2" href="classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="5,5,88,32"/></map>
+<area shape="rect" id="node2" href="classtmx_1_1_component.html" title="A base class for classes that have properties. " alt="" coords="5,5,124,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -75,49 +75,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb7733114f3ecaeeb5f525e5899b0ea7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#aeb7733114f3ecaeeb5f525e5899b0ea7">Tile</a> (unsigned id, const std::array&lt; unsigned, 4 &gt; &amp;terrain, unsigned probability)</td></tr>
 <tr class="memdesc:aeb7733114f3ecaeeb5f525e5899b0ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtmx_1_1_tile.html" title="A tile is a rectangular part of a tileset. ">Tile</a> constructor.  <a href="#aeb7733114f3ecaeeb5f525e5899b0ea7">More...</a><br /></td></tr>
 <tr class="separator:aeb7733114f3ecaeeb5f525e5899b0ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe1eac022f5f365310a70a721b01f608"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#abe1eac022f5f365310a70a721b01f608">~Tile</a> ()</td></tr>
-<tr class="memdesc:abe1eac022f5f365310a70a721b01f608"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtmx_1_1_tile.html" title="A tile is a rectangular part of a tileset. ">Tile</a> destructor.  <a href="#abe1eac022f5f365310a70a721b01f608">More...</a><br /></td></tr>
-<tr class="separator:abe1eac022f5f365310a70a721b01f608"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d5bfddd9e6d78122952621e16b7c434"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a8d5bfddd9e6d78122952621e16b7c434">getId</a> () const </td></tr>
-<tr class="memdesc:a8d5bfddd9e6d78122952621e16b7c434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the local id of the tile.  <a href="#a8d5bfddd9e6d78122952621e16b7c434">More...</a><br /></td></tr>
-<tr class="separator:a8d5bfddd9e6d78122952621e16b7c434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b81af3bb22fa2d098a11680f3cbd91d"><td class="memItemLeft" align="right" valign="top">const std::array&lt; unsigned, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a3b81af3bb22fa2d098a11680f3cbd91d">getTerrain</a> () const </td></tr>
-<tr class="memdesc:a3b81af3bb22fa2d098a11680f3cbd91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrains on the four corners.  <a href="#a3b81af3bb22fa2d098a11680f3cbd91d">More...</a><br /></td></tr>
-<tr class="separator:a3b81af3bb22fa2d098a11680f3cbd91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7edebaf05fd48ae60bfacef08bf0bd4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#aa7edebaf05fd48ae60bfacef08bf0bd4">getTopLeftTerrain</a> () const </td></tr>
-<tr class="memdesc:aa7edebaf05fd48ae60bfacef08bf0bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the top left corner.  <a href="#aa7edebaf05fd48ae60bfacef08bf0bd4">More...</a><br /></td></tr>
-<tr class="separator:aa7edebaf05fd48ae60bfacef08bf0bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb76bd9930c29b12c874b4b769364dfe"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#acb76bd9930c29b12c874b4b769364dfe">getTopRightTerrain</a> () const </td></tr>
-<tr class="memdesc:acb76bd9930c29b12c874b4b769364dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the top right corner.  <a href="#acb76bd9930c29b12c874b4b769364dfe">More...</a><br /></td></tr>
-<tr class="separator:acb76bd9930c29b12c874b4b769364dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89cb2e8d728fdfa81bc8b499bb70c4ab"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a89cb2e8d728fdfa81bc8b499bb70c4ab">getBottomLeftTerrain</a> () const </td></tr>
-<tr class="memdesc:a89cb2e8d728fdfa81bc8b499bb70c4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the bottom left corner.  <a href="#a89cb2e8d728fdfa81bc8b499bb70c4ab">More...</a><br /></td></tr>
-<tr class="separator:a89cb2e8d728fdfa81bc8b499bb70c4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acefd5bb19ad61a442bf6acb01fdd4a9b"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#acefd5bb19ad61a442bf6acb01fdd4a9b">getBottomRightTerrain</a> () const </td></tr>
-<tr class="memdesc:acefd5bb19ad61a442bf6acb01fdd4a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the bottom right corner.  <a href="#acefd5bb19ad61a442bf6acb01fdd4a9b">More...</a><br /></td></tr>
-<tr class="separator:acefd5bb19ad61a442bf6acb01fdd4a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c49a5bb8afd61f5d2c8e3502048e1e2"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a4c49a5bb8afd61f5d2c8e3502048e1e2">getProbability</a> () const </td></tr>
-<tr class="memdesc:a4c49a5bb8afd61f5d2c8e3502048e1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the probability of this tile.  <a href="#a4c49a5bb8afd61f5d2c8e3502048e1e2">More...</a><br /></td></tr>
-<tr class="separator:a4c49a5bb8afd61f5d2c8e3502048e1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6f1a61e668d2d63a3355b454c2e06b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a5a6f1a61e668d2d63a3355b454c2e06b">setImage</a> (<a class="el" href="classtmx_1_1_image.html">Image</a> *image)</td></tr>
-<tr class="memdesc:a5a6f1a61e668d2d63a3355b454c2e06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image of this tile.  <a href="#a5a6f1a61e668d2d63a3355b454c2e06b">More...</a><br /></td></tr>
-<tr class="separator:a5a6f1a61e668d2d63a3355b454c2e06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24ceee8313fa6583e74916fa105bdd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#ac24ceee8313fa6583e74916fa105bdd1">hasImage</a> () const </td></tr>
-<tr class="memdesc:ac24ceee8313fa6583e74916fa105bdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the tile has an image.  <a href="#ac24ceee8313fa6583e74916fa105bdd1">More...</a><br /></td></tr>
-<tr class="separator:ac24ceee8313fa6583e74916fa105bdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8d4f9137e413e70baabc9ed506abc0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classtmx_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#abb8d4f9137e413e70baabc9ed506abc0">getImage</a> () const </td></tr>
-<tr class="memdesc:abb8d4f9137e413e70baabc9ed506abc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image of this tile.  <a href="#abb8d4f9137e413e70baabc9ed506abc0">More...</a><br /></td></tr>
-<tr class="separator:abb8d4f9137e413e70baabc9ed506abc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classtmx_1_1_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classtmx_1_1_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classtmx_1_1_base.html">tmx::Base</a></td></tr>
-<tr class="memitem:ab6e437f3e7a31bbba2b9149edad392f2 inherit pub_methods_classtmx_1_1_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_base.html#ab6e437f3e7a31bbba2b9149edad392f2">hasProperty</a> (const std::string &amp;key) const </td></tr>
-<tr class="memdesc:ab6e437f3e7a31bbba2b9149edad392f2 inherit pub_methods_classtmx_1_1_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell if the object has a given property.  <a href="#ab6e437f3e7a31bbba2b9149edad392f2">More...</a><br /></td></tr>
-<tr class="separator:ab6e437f3e7a31bbba2b9149edad392f2 inherit pub_methods_classtmx_1_1_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae2c56fbfd548205a0fb6dfa7c11c6dd inherit pub_methods_classtmx_1_1_base"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_base.html#aae2c56fbfd548205a0fb6dfa7c11c6dd">getProperty</a> (const std::string &amp;key, const std::string &amp;def) const </td></tr>
-<tr class="memdesc:aae2c56fbfd548205a0fb6dfa7c11c6dd inherit pub_methods_classtmx_1_1_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a property value.  <a href="#aae2c56fbfd548205a0fb6dfa7c11c6dd">More...</a><br /></td></tr>
-<tr class="separator:aae2c56fbfd548205a0fb6dfa7c11c6dd inherit pub_methods_classtmx_1_1_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7dc834436500ac783b04fcde245aa2a inherit pub_methods_classtmx_1_1_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_base.html#af7dc834436500ac783b04fcde245aa2a">addProperty</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
-<tr class="memdesc:af7dc834436500ac783b04fcde245aa2a inherit pub_methods_classtmx_1_1_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a property.  <a href="#af7dc834436500ac783b04fcde245aa2a">More...</a><br /></td></tr>
-<tr class="separator:af7dc834436500ac783b04fcde245aa2a inherit pub_methods_classtmx_1_1_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24d3e1e91379e79b6213544eee422e3"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#ab24d3e1e91379e79b6213544eee422e3">getId</a> () const noexcept</td></tr>
+<tr class="memdesc:ab24d3e1e91379e79b6213544eee422e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the local id of the tile.  <a href="#ab24d3e1e91379e79b6213544eee422e3">More...</a><br /></td></tr>
+<tr class="separator:ab24d3e1e91379e79b6213544eee422e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7424420c5b63e0589b38ecaebff43290"><td class="memItemLeft" align="right" valign="top">const std::array&lt; unsigned, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a7424420c5b63e0589b38ecaebff43290">getTerrain</a> () const noexcept</td></tr>
+<tr class="memdesc:a7424420c5b63e0589b38ecaebff43290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrains on the four corners.  <a href="#a7424420c5b63e0589b38ecaebff43290">More...</a><br /></td></tr>
+<tr class="separator:a7424420c5b63e0589b38ecaebff43290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aea795989324804a820787113a5fb01"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a5aea795989324804a820787113a5fb01">getTopLeftTerrain</a> () const noexcept</td></tr>
+<tr class="memdesc:a5aea795989324804a820787113a5fb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the top left corner.  <a href="#a5aea795989324804a820787113a5fb01">More...</a><br /></td></tr>
+<tr class="separator:a5aea795989324804a820787113a5fb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf66d3468bca63c872fd62ae9ed6f95"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#accf66d3468bca63c872fd62ae9ed6f95">getTopRightTerrain</a> () const noexcept</td></tr>
+<tr class="memdesc:accf66d3468bca63c872fd62ae9ed6f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the top right corner.  <a href="#accf66d3468bca63c872fd62ae9ed6f95">More...</a><br /></td></tr>
+<tr class="separator:accf66d3468bca63c872fd62ae9ed6f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20bb53317076528f0f0f53e8f59b8d82"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a20bb53317076528f0f0f53e8f59b8d82">getBottomLeftTerrain</a> () const noexcept</td></tr>
+<tr class="memdesc:a20bb53317076528f0f0f53e8f59b8d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the bottom left corner.  <a href="#a20bb53317076528f0f0f53e8f59b8d82">More...</a><br /></td></tr>
+<tr class="separator:a20bb53317076528f0f0f53e8f59b8d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3616552e5ceeadc67faa66c7bf464c83"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a3616552e5ceeadc67faa66c7bf464c83">getBottomRightTerrain</a> () const noexcept</td></tr>
+<tr class="memdesc:a3616552e5ceeadc67faa66c7bf464c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the terrain in the bottom right corner.  <a href="#a3616552e5ceeadc67faa66c7bf464c83">More...</a><br /></td></tr>
+<tr class="separator:a3616552e5ceeadc67faa66c7bf464c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089ea3226042172189cf90fba94fce86"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a089ea3226042172189cf90fba94fce86">getProbability</a> () const noexcept</td></tr>
+<tr class="memdesc:a089ea3226042172189cf90fba94fce86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the probability of this tile.  <a href="#a089ea3226042172189cf90fba94fce86">More...</a><br /></td></tr>
+<tr class="separator:a089ea3226042172189cf90fba94fce86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c93a8c4750bbdbfca793eb6faf3847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a99c93a8c4750bbdbfca793eb6faf3847">setImage</a> (std::unique_ptr&lt; <a class="el" href="classtmx_1_1_image.html">Image</a> &gt; image)</td></tr>
+<tr class="memdesc:a99c93a8c4750bbdbfca793eb6faf3847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image of this tile.  <a href="#a99c93a8c4750bbdbfca793eb6faf3847">More...</a><br /></td></tr>
+<tr class="separator:a99c93a8c4750bbdbfca793eb6faf3847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e40200d359cfcd386641cb40380020"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#ac0e40200d359cfcd386641cb40380020">hasImage</a> () const noexcept</td></tr>
+<tr class="memdesc:ac0e40200d359cfcd386641cb40380020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the tile has an image.  <a href="#ac0e40200d359cfcd386641cb40380020">More...</a><br /></td></tr>
+<tr class="separator:ac0e40200d359cfcd386641cb40380020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b46a5b190cfda745e1b992c41547ea"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classtmx_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_tile.html#a71b46a5b190cfda745e1b992c41547ea">getImage</a> () const noexcept</td></tr>
+<tr class="memdesc:a71b46a5b190cfda745e1b992c41547ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image of this tile.  <a href="#a71b46a5b190cfda745e1b992c41547ea">More...</a><br /></td></tr>
+<tr class="separator:a71b46a5b190cfda745e1b992c41547ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classtmx_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classtmx_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classtmx_1_1_component.html">tmx::Component</a></td></tr>
+<tr class="memitem:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#a99bc97b0d0ec71c3630464ec86c51c69">hasProperty</a> (const std::string &amp;key) const noexcept</td></tr>
+<tr class="memdesc:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell if the object has a given property.  <a href="#a99bc97b0d0ec71c3630464ec86c51c69">More...</a><br /></td></tr>
+<tr class="separator:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#a740163d2f8c2faf7ff33f7dd7c67fe23">getProperty</a> (const std::string &amp;key, const std::string &amp;def) const noexcept</td></tr>
+<tr class="memdesc:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a property value.  <a href="#a740163d2f8c2faf7ff33f7dd7c67fe23">More...</a><br /></td></tr>
+<tr class="separator:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#af59293749d0dbf8f5ca78e733101eb5e">addProperty</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a property.  <a href="#af59293749d0dbf8f5ca78e733101eb5e">More...</a><br /></td></tr>
+<tr class="separator:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A tile is a rectangular part of a tileset. </p>
@@ -164,33 +161,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abe1eac022f5f365310a70a721b01f608"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">tmx::Tile::~Tile </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classtmx_1_1_tile.html" title="A tile is a rectangular part of a tileset. ">Tile</a> destructor. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a89cb2e8d728fdfa81bc8b499bb70c4ab"></a>
+<a class="anchor" id="a20bb53317076528f0f0f53e8f59b8d82"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,7 +178,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -216,7 +188,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acefd5bb19ad61a442bf6acb01fdd4a9b"></a>
+<a class="anchor" id="a3616552e5ceeadc67faa66c7bf464c83"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -232,7 +204,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,7 +214,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8d5bfddd9e6d78122952621e16b7c434"></a>
+<a class="anchor" id="ab24d3e1e91379e79b6213544eee422e3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -258,7 +230,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -268,7 +240,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb8d4f9137e413e70baabc9ed506abc0"></a>
+<a class="anchor" id="a71b46a5b190cfda745e1b992c41547ea"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,7 +256,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -294,7 +266,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4c49a5bb8afd61f5d2c8e3502048e1e2"></a>
+<a class="anchor" id="a089ea3226042172189cf90fba94fce86"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -310,7 +282,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -320,7 +292,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b81af3bb22fa2d098a11680f3cbd91d"></a>
+<a class="anchor" id="a7424420c5b63e0589b38ecaebff43290"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -336,7 +308,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -346,7 +318,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa7edebaf05fd48ae60bfacef08bf0bd4"></a>
+<a class="anchor" id="a5aea795989324804a820787113a5fb01"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -362,7 +334,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -372,7 +344,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb76bd9930c29b12c874b4b769364dfe"></a>
+<a class="anchor" id="accf66d3468bca63c872fd62ae9ed6f95"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -388,7 +360,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -398,7 +370,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac24ceee8313fa6583e74916fa105bdd1"></a>
+<a class="anchor" id="ac0e40200d359cfcd386641cb40380020"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -414,7 +386,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -424,7 +396,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5a6f1a61e668d2d63a3355b454c2e06b"></a>
+<a class="anchor" id="a99c93a8c4750bbdbfca793eb6faf3847"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -434,7 +406,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void tmx::Tile::setImage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classtmx_1_1_image.html">Image</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classtmx_1_1_image.html">Image</a> &gt;&#160;</td>
           <td class="paramname"><em>image</em></td><td>)</td>
           <td></td>
         </tr>
@@ -459,7 +431,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:10 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,0 +1,6 @@
+<map id="tmx::Chain" name="tmx::Chain">
+<area shape="rect" id="node4" href="$classtmx_1_1_polygon.html" title="A polygon is a closed set of lines. " alt="" coords="5,229,104,256"/>
+<area shape="rect" id="node5" href="$classtmx_1_1_polyline.html" title="A polyline is an open set of lines. " alt="" coords="128,229,227,256"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="71,80,161,107"/>
+<area shape="rect" id="node3" href="$classtmx_1_1_component.html" title="A base class for classes that have properties. " alt="" coords="57,5,175,32"/>
+</map>

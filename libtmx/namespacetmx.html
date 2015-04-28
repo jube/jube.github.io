@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -46,8 +46,7 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">tmx Namespace Reference</div>  </div>
 </div><!--header-->
@@ -58,14 +57,20 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_base.html">Base</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class for classes that have properties.  <a href="classtmx_1_1_base.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtmx_1_1_adaptor.html">Adaptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An adaptor to get raw pointer from a unique pointer.  <a href="structtmx_1_1_adaptor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_boxed.html">Boxed</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boxed object is a geometrical object that is defined by a box.  <a href="classtmx_1_1_boxed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_cell.html">Cell</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A cell is a square on a map layer that is filled with a tile.  <a href="classtmx_1_1_cell.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_chain.html">Chain</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A chain is a base class for lines with multiple points.  <a href="classtmx_1_1_chain.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html">Component</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class for classes that have properties.  <a href="classtmx_1_1_component.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_ellipse.html">Ellipse</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An ellipse is a geometrical object.  <a href="classtmx_1_1_ellipse.html#details">More...</a><br /></td></tr>
@@ -90,9 +95,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_object_layer.html">ObjectLayer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object layer is a layers composed of objects.  <a href="classtmx_1_1_object_layer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_poly_base.html">PolyBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A "polybase" is a base class for lines with multiple points.  <a href="classtmx_1_1_poly_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_polygon.html">Polygon</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A polygon is a closed set of lines.  <a href="classtmx_1_1_polygon.html#details">More...</a><br /></td></tr>
@@ -145,12 +147,18 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a783413653e11e900412d850b3cc64f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the orientation of the map.  <a href="namespacetmx.html#a783413653e11e900412d850b3cc64f6f">More...</a><br /></td></tr>
 <tr class="separator:a783413653e11e900412d850b3cc64f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ac61766dceb7872834c7a26229aea58d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_map.html">Map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetmx.html#ac61766dceb7872834c7a26229aea58d6">parseMapFile</a> (const boost::filesystem::path &amp;filename)</td></tr>
-<tr class="memdesc:ac61766dceb7872834c7a26229aea58d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a TMX file.  <a href="#ac61766dceb7872834c7a26229aea58d6">More...</a><br /></td></tr>
-<tr class="separator:ac61766dceb7872834c7a26229aea58d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35355db009c92c3e50a152fc25f51705"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">RenderOrder</a> { <br />
+&#160;&#160;<a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705ad904e5818165807101f4603409bd15ab">RenderOrder::RIGHT_DOWN</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705a1e01c60be1a0b8ed84f7f1ab35d01daa">RenderOrder::RIGHT_UP</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705a16a9066375b3b3aaa9c8eb4313411db2">RenderOrder::LEFT_DOWN</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705a478a4e9640e7519838d34b473e233b2a">RenderOrder::LEFT_UP</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a35355db009c92c3e50a152fc25f51705"><td class="mdescLeft">&#160;</td><td class="mdescRight">the render order of the tiles.  <a href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">More...</a><br /></td></tr>
+<tr class="separator:a35355db009c92c3e50a152fc25f51705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The namespace for all <code>libtmx</code> classes. </p>
@@ -191,36 +199,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac61766dceb7872834c7a26229aea58d6"></a>
+<a class="anchor" id="a35355db009c92c3e50a152fc25f51705"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtmx_1_1_map.html">Map</a>* tmx::parseMapFile </td>
-          <td>(</td>
-          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
+          <td class="memname">enum <a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">tmx::RenderOrder</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Parse a TMX file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>the name of the TMX file </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a map </dd></dl>
+<p>the render order of the tiles. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a35355db009c92c3e50a152fc25f51705ad904e5818165807101f4603409bd15ab"></a>RIGHT_DOWN&#160;</td><td class="fielddoc">
+<p>Right down order </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a35355db009c92c3e50a152fc25f51705a1e01c60be1a0b8ed84f7f1ab35d01daa"></a>RIGHT_UP&#160;</td><td class="fielddoc">
+<p>Right up order </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a35355db009c92c3e50a152fc25f51705a16a9066375b3b3aaa9c8eb4313411db2"></a>LEFT_DOWN&#160;</td><td class="fielddoc">
+<p>Left down order </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a35355db009c92c3e50a152fc25f51705a478a4e9640e7519838d34b473e233b2a"></a>LEFT_UP&#160;</td><td class="fielddoc">
+<p>Left up order </p>
+</td></tr>
+</table>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

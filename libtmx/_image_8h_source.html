@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -80,31 +80,31 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a27e960729347862514d9fa6f4e3ded7e">   46</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_image.html#a27e960729347862514d9fa6f4e3ded7e">getFormat</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#ac3fbe6494a7cd6dfc028c7aed84c75e5">   46</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_image.html#ac3fbe6494a7cd6dfc028c7aed84c75e5">getFormat</a>() const noexcept {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">return</span> m_format;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a7a74645a6e08851e15ecbfc0b27d3fc8">   55</a></span>&#160;    <span class="keyword">const</span> boost::filesystem::path&amp; <a class="code" href="classtmx_1_1_image.html#a7a74645a6e08851e15ecbfc0b27d3fc8">getSource</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a51f691fdd2451ffa6f0b912d92410376">   55</a></span>&#160;    <span class="keyword">const</span> boost::filesystem::path&amp; <a class="code" href="classtmx_1_1_image.html#a51f691fdd2451ffa6f0b912d92410376">getSource</a>() const noexcept {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">return</span> m_source;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a3e630caf4294b78c6fc35bc170b9c9b1">   64</a></span>&#160;    <span class="keyword">const</span> std::string <a class="code" href="classtmx_1_1_image.html#a3e630caf4294b78c6fc35bc170b9c9b1">getTransparent</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#abe2fbe4b0cff8d7f222c7950b895b38c">   64</a></span>&#160;    <span class="keyword">const</span> std::string <a class="code" href="classtmx_1_1_image.html#abe2fbe4b0cff8d7f222c7950b895b38c">getTransparent</a>() const noexcept {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> m_trans;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#ad0a8b6a0839e858b408417d85fadfe84">   73</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_image.html#ad0a8b6a0839e858b408417d85fadfe84">getWidth</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a22ccded000c30275f2e49160bd814e52">   73</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_image.html#a22ccded000c30275f2e49160bd814e52">getWidth</a>() const noexcept {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">return</span> m_width;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a155636f53c1b60dd0b43c9f4b7213211">   82</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_image.html#a155636f53c1b60dd0b43c9f4b7213211">getHeight</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a5b3a93a2f9502b3af1ab0e66d65c904b">   82</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_image.html#a5b3a93a2f9502b3af1ab0e66d65c904b">getHeight</a>() const noexcept {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> m_height;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#aa93a4046c43905235c2153be6b226cc4">   91</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_image.html#aa93a4046c43905235c2153be6b226cc4">hasSize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a75a08351ddef282b52a99701d34886b8">   91</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_image.html#a75a08351ddef282b52a99701d34886b8">hasSize</a>() const noexcept {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">return</span> m_width &gt; 0 &amp;&amp; m_height &gt; 0;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a52f31ed4ad84a48b3a6a235ffe94464c">  100</a></span>&#160;    <a class="code" href="structtmx_1_1_size.html">Size</a> <a class="code" href="classtmx_1_1_image.html#a52f31ed4ad84a48b3a6a235ffe94464c">getSize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classtmx_1_1_image.html#a7f96b95aed9bffa9b6d8a34bded079bf">  100</a></span>&#160;    <a class="code" href="structtmx_1_1_size.html">Size</a> <a class="code" href="classtmx_1_1_image.html#a7f96b95aed9bffa9b6d8a34bded079bf">getSize</a>() const noexcept {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> { m_width, m_height };</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
@@ -120,21 +120,21 @@
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // TMX_IMAGE_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
 <div class="ttc" id="classtmx_1_1_image_html_afd471ee8dadf19cf4bf718de01d98214"><div class="ttname"><a href="classtmx_1_1_image.html#afd471ee8dadf19cf4bf718de01d98214">tmx::Image::Image</a></div><div class="ttdeci">Image(const std::string &amp;format, const boost::filesystem::path &amp;source, const std::string &amp;trans, unsigned width, unsigned height)</div><div class="ttdoc">Image constructor. </div><div class="ttdef"><b>Definition:</b> Image.h:35</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_ac3fbe6494a7cd6dfc028c7aed84c75e5"><div class="ttname"><a href="classtmx_1_1_image.html#ac3fbe6494a7cd6dfc028c7aed84c75e5">tmx::Image::getFormat</a></div><div class="ttdeci">const std::string &amp; getFormat() const noexcept</div><div class="ttdoc">Get the format of the file (if provided). </div><div class="ttdef"><b>Definition:</b> Image.h:46</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_a7f96b95aed9bffa9b6d8a34bded079bf"><div class="ttname"><a href="classtmx_1_1_image.html#a7f96b95aed9bffa9b6d8a34bded079bf">tmx::Image::getSize</a></div><div class="ttdeci">Size getSize() const noexcept</div><div class="ttdoc">Get the declared size of the image. </div><div class="ttdef"><b>Definition:</b> Image.h:100</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_abe2fbe4b0cff8d7f222c7950b895b38c"><div class="ttname"><a href="classtmx_1_1_image.html#abe2fbe4b0cff8d7f222c7950b895b38c">tmx::Image::getTransparent</a></div><div class="ttdeci">const std::string getTransparent() const noexcept</div><div class="ttdoc">Get the transparent color (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:64</div></div>
 <div class="ttc" id="classtmx_1_1_image_html"><div class="ttname"><a href="classtmx_1_1_image.html">tmx::Image</a></div><div class="ttdoc">An image is an image file on the system. </div><div class="ttdef"><b>Definition:</b> Image.h:30</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_a3e630caf4294b78c6fc35bc170b9c9b1"><div class="ttname"><a href="classtmx_1_1_image.html#a3e630caf4294b78c6fc35bc170b9c9b1">tmx::Image::getTransparent</a></div><div class="ttdeci">const std::string getTransparent() const </div><div class="ttdoc">Get the transparent color (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:64</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_a52f31ed4ad84a48b3a6a235ffe94464c"><div class="ttname"><a href="classtmx_1_1_image.html#a52f31ed4ad84a48b3a6a235ffe94464c">tmx::Image::getSize</a></div><div class="ttdeci">Size getSize() const </div><div class="ttdoc">Get the declared size of the image. </div><div class="ttdef"><b>Definition:</b> Image.h:100</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_a7a74645a6e08851e15ecbfc0b27d3fc8"><div class="ttname"><a href="classtmx_1_1_image.html#a7a74645a6e08851e15ecbfc0b27d3fc8">tmx::Image::getSource</a></div><div class="ttdeci">const boost::filesystem::path &amp; getSource() const </div><div class="ttdoc">Get the path to the image file. </div><div class="ttdef"><b>Definition:</b> Image.h:55</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_a27e960729347862514d9fa6f4e3ded7e"><div class="ttname"><a href="classtmx_1_1_image.html#a27e960729347862514d9fa6f4e3ded7e">tmx::Image::getFormat</a></div><div class="ttdeci">const std::string &amp; getFormat() const </div><div class="ttdoc">Get the format of the file (if provided). </div><div class="ttdef"><b>Definition:</b> Image.h:46</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_ad0a8b6a0839e858b408417d85fadfe84"><div class="ttname"><a href="classtmx_1_1_image.html#ad0a8b6a0839e858b408417d85fadfe84">tmx::Image::getWidth</a></div><div class="ttdeci">unsigned getWidth() const </div><div class="ttdoc">Get the width of the image (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:73</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_a155636f53c1b60dd0b43c9f4b7213211"><div class="ttname"><a href="classtmx_1_1_image.html#a155636f53c1b60dd0b43c9f4b7213211">tmx::Image::getHeight</a></div><div class="ttdeci">unsigned getHeight() const </div><div class="ttdoc">Get the height of the image (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:82</div></div>
-<div class="ttc" id="classtmx_1_1_image_html_aa93a4046c43905235c2153be6b226cc4"><div class="ttname"><a href="classtmx_1_1_image.html#aa93a4046c43905235c2153be6b226cc4">tmx::Image::hasSize</a></div><div class="ttdeci">bool hasSize() const </div><div class="ttdoc">Tell whether the width and height are set. </div><div class="ttdef"><b>Definition:</b> Image.h:91</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_a51f691fdd2451ffa6f0b912d92410376"><div class="ttname"><a href="classtmx_1_1_image.html#a51f691fdd2451ffa6f0b912d92410376">tmx::Image::getSource</a></div><div class="ttdeci">const boost::filesystem::path &amp; getSource() const noexcept</div><div class="ttdoc">Get the path to the image file. </div><div class="ttdef"><b>Definition:</b> Image.h:55</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_a5b3a93a2f9502b3af1ab0e66d65c904b"><div class="ttname"><a href="classtmx_1_1_image.html#a5b3a93a2f9502b3af1ab0e66d65c904b">tmx::Image::getHeight</a></div><div class="ttdeci">unsigned getHeight() const noexcept</div><div class="ttdoc">Get the height of the image (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:82</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_a75a08351ddef282b52a99701d34886b8"><div class="ttname"><a href="classtmx_1_1_image.html#a75a08351ddef282b52a99701d34886b8">tmx::Image::hasSize</a></div><div class="ttdeci">bool hasSize() const noexcept</div><div class="ttdoc">Tell whether the width and height are set. </div><div class="ttdef"><b>Definition:</b> Image.h:91</div></div>
 <div class="ttc" id="structtmx_1_1_size_html"><div class="ttname"><a href="structtmx_1_1_size.html">tmx::Size</a></div><div class="ttdoc">A size of an image. </div><div class="ttdef"><b>Definition:</b> Geometry.h:24</div></div>
+<div class="ttc" id="classtmx_1_1_image_html_a22ccded000c30275f2e49160bd814e52"><div class="ttname"><a href="classtmx_1_1_image.html#a22ccded000c30275f2e49160bd814e52">tmx::Image::getWidth</a></div><div class="ttdeci">unsigned getWidth() const noexcept</div><div class="ttdoc">Get the width of the image (if provided) </div><div class="ttdef"><b>Definition:</b> Image.h:73</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

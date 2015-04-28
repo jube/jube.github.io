@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -66,22 +66,22 @@
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Base.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Component.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetmx.html">tmx</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html">   28</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_terrain.html">Terrain</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_base.html">Base</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html">   28</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_terrain.html">Terrain</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_component.html">Component</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html#ac948c016c6114a6697d369fd7737e32e">   33</a></span>&#160;    <a class="code" href="classtmx_1_1_terrain.html#ac948c016c6114a6697d369fd7737e32e">Terrain</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">unsigned</span> tile)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      : m_name(name), m_tile(tile)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html#a7142d4e0afeb44dd4df9039061ee758d">   43</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_terrain.html#a7142d4e0afeb44dd4df9039061ee758d">getName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html#a7bc14c784c3b09ba729a958883aa4e7a">   43</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_terrain.html#a7bc14c784c3b09ba729a958883aa4e7a">getName</a>() const noexcept {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">return</span> m_name;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html#a1710ddda2a3ad75cac5e901bede2241a">   52</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_terrain.html#a1710ddda2a3ad75cac5e901bede2241a">getTile</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classtmx_1_1_terrain.html#aa3ffa410251dcd5fee8b2ba9ae49f80b">   52</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_terrain.html#aa3ffa410251dcd5fee8b2ba9ae49f80b">getTile</a>() const noexcept {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> m_tile;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
@@ -94,16 +94,16 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif // TMX_TERRAIN_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
 <div class="ttc" id="classtmx_1_1_terrain_html_ac948c016c6114a6697d369fd7737e32e"><div class="ttname"><a href="classtmx_1_1_terrain.html#ac948c016c6114a6697d369fd7737e32e">tmx::Terrain::Terrain</a></div><div class="ttdeci">Terrain(const std::string &amp;name, unsigned tile)</div><div class="ttdoc">Terrain constructor. </div><div class="ttdef"><b>Definition:</b> Terrain.h:33</div></div>
 <div class="ttc" id="classtmx_1_1_terrain_html"><div class="ttname"><a href="classtmx_1_1_terrain.html">tmx::Terrain</a></div><div class="ttdoc">A terrain describes a kind of terrain on the map. </div><div class="ttdef"><b>Definition:</b> Terrain.h:28</div></div>
-<div class="ttc" id="classtmx_1_1_terrain_html_a1710ddda2a3ad75cac5e901bede2241a"><div class="ttname"><a href="classtmx_1_1_terrain.html#a1710ddda2a3ad75cac5e901bede2241a">tmx::Terrain::getTile</a></div><div class="ttdeci">unsigned getTile() const </div><div class="ttdoc">Get the representing tile for the terrain. </div><div class="ttdef"><b>Definition:</b> Terrain.h:52</div></div>
-<div class="ttc" id="classtmx_1_1_base_html"><div class="ttname"><a href="classtmx_1_1_base.html">tmx::Base</a></div><div class="ttdoc">A base class for classes that have properties. </div><div class="ttdef"><b>Definition:</b> Base.h:27</div></div>
-<div class="ttc" id="classtmx_1_1_terrain_html_a7142d4e0afeb44dd4df9039061ee758d"><div class="ttname"><a href="classtmx_1_1_terrain.html#a7142d4e0afeb44dd4df9039061ee758d">tmx::Terrain::getName</a></div><div class="ttdeci">const std::string &amp; getName() const </div><div class="ttdoc">Get the name of the terrain. </div><div class="ttdef"><b>Definition:</b> Terrain.h:43</div></div>
+<div class="ttc" id="classtmx_1_1_component_html"><div class="ttname"><a href="classtmx_1_1_component.html">tmx::Component</a></div><div class="ttdoc">A base class for classes that have properties. </div><div class="ttdef"><b>Definition:</b> Component.h:27</div></div>
+<div class="ttc" id="classtmx_1_1_terrain_html_a7bc14c784c3b09ba729a958883aa4e7a"><div class="ttname"><a href="classtmx_1_1_terrain.html#a7bc14c784c3b09ba729a958883aa4e7a">tmx::Terrain::getName</a></div><div class="ttdeci">const std::string &amp; getName() const noexcept</div><div class="ttdoc">Get the name of the terrain. </div><div class="ttdef"><b>Definition:</b> Terrain.h:43</div></div>
+<div class="ttc" id="classtmx_1_1_terrain_html_aa3ffa410251dcd5fee8b2ba9ae49f80b"><div class="ttname"><a href="classtmx_1_1_terrain.html#aa3ffa410251dcd5fee8b2ba9ae49f80b">tmx::Terrain::getTile</a></div><div class="ttdeci">unsigned getTile() const noexcept</div><div class="ttdoc">Get the representing tile for the terrain. </div><div class="ttdef"><b>Definition:</b> Terrain.h:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

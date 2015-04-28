@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -64,59 +64,61 @@
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef TMX_LAYER_BASE_H</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define TMX_LAYER_BASE_H</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;Base.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;Component.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetmx.html">tmx</a> {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">class </span>LayerVisitor;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html">   29</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_layer.html">Layer</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_base.html">Base</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">   34</a></span>&#160;    <a class="code" href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">Layer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> opacity, <span class="keywordtype">bool</span> visible)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      : m_name(name), m_opacity(opacity), m_visible(visible)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classtmx_1_1_layer.html#aa857d582e5fd49addd410636be49a37b">~Layer</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer.html#ad23b1907e38412d214200ce885c8ac0a">accept</a>(<a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor) = 0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#ae95d45e78e1b05729198ca245b183e32">   56</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_layer.html#ae95d45e78e1b05729198ca245b183e32">getName</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> m_name;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a7f047e6884eb59a7b3e8c859616a3e0a">   65</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classtmx_1_1_layer.html#a7f047e6884eb59a7b3e8c859616a3e0a">getOpacity</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> m_opacity;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a752da0994b6280640dedf393a7b2e710">   74</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_layer.html#a752da0994b6280640dedf393a7b2e710">isVisible</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> m_visible;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> std::string m_name;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">double</span> m_opacity;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> m_visible;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">class </span>Map;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html">   30</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_layer.html">Layer</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_component.html">Component</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">   35</a></span>&#160;    <a class="code" href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">Layer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> opacity, <span class="keywordtype">bool</span> visible)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      : m_name(name), m_opacity(opacity), m_visible(visible)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classtmx_1_1_layer.html#aa857d582e5fd49addd410636be49a37b">~Layer</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer.html#a32429c9abd24b731f24f812d07dacb91">accept</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a831588e2e26c2d9161fb069304562790">   57</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_layer.html#a831588e2e26c2d9161fb069304562790">getName</a>() const noexcept {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> m_name;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#a2bbf83589d4a047d89f3c2258b43bc91">   66</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classtmx_1_1_layer.html#a2bbf83589d4a047d89f3c2258b43bc91">getOpacity</a>() const noexcept {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> m_opacity;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer.html#ae317c1c871f6fc034bea58c515b45dd0">   75</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_layer.html#ae317c1c871f6fc034bea58c515b45dd0">isVisible</a>() const noexcept {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> m_visible;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> std::string m_name;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">double</span> m_opacity;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> m_visible;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // TMX_LAYER_BASE_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html_ad23b1907e38412d214200ce885c8ac0a"><div class="ttname"><a href="classtmx_1_1_layer.html#ad23b1907e38412d214200ce885c8ac0a">tmx::Layer::accept</a></div><div class="ttdeci">virtual void accept(LayerVisitor &amp;visitor)=0</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
-<div class="ttc" id="classtmx_1_1_layer_html_ae95d45e78e1b05729198ca245b183e32"><div class="ttname"><a href="classtmx_1_1_layer.html#ae95d45e78e1b05729198ca245b183e32">tmx::Layer::getName</a></div><div class="ttdeci">const std::string &amp; getName() const </div><div class="ttdoc">Get the name of the layer. </div><div class="ttdef"><b>Definition:</b> Layer.h:56</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html_a752da0994b6280640dedf393a7b2e710"><div class="ttname"><a href="classtmx_1_1_layer.html#a752da0994b6280640dedf393a7b2e710">tmx::Layer::isVisible</a></div><div class="ttdeci">bool isVisible() const </div><div class="ttdoc">Tell whether the layer is visible. </div><div class="ttdef"><b>Definition:</b> Layer.h:74</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html_a7f047e6884eb59a7b3e8c859616a3e0a"><div class="ttname"><a href="classtmx_1_1_layer.html#a7f047e6884eb59a7b3e8c859616a3e0a">tmx::Layer::getOpacity</a></div><div class="ttdeci">double getOpacity() const </div><div class="ttdoc">Get the opacity of the layer. </div><div class="ttdef"><b>Definition:</b> Layer.h:65</div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:27</div></div>
-<div class="ttc" id="classtmx_1_1_base_html"><div class="ttname"><a href="classtmx_1_1_base.html">tmx::Base</a></div><div class="ttdoc">A base class for classes that have properties. </div><div class="ttdef"><b>Definition:</b> Base.h:27</div></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif // TMX_LAYER_BASE_H</span></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html_a32429c9abd24b731f24f812d07dacb91"><div class="ttname"><a href="classtmx_1_1_layer.html#a32429c9abd24b731f24f812d07dacb91">tmx::Layer::accept</a></div><div class="ttdeci">virtual void accept(const Map &amp;map, LayerVisitor &amp;visitor) const =0</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
+<div class="ttc" id="classtmx_1_1_component_html"><div class="ttname"><a href="classtmx_1_1_component.html">tmx::Component</a></div><div class="ttdoc">A base class for classes that have properties. </div><div class="ttdef"><b>Definition:</b> Component.h:27</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html_a2bbf83589d4a047d89f3c2258b43bc91"><div class="ttname"><a href="classtmx_1_1_layer.html#a2bbf83589d4a047d89f3c2258b43bc91">tmx::Layer::getOpacity</a></div><div class="ttdeci">double getOpacity() const noexcept</div><div class="ttdoc">Get the opacity of the layer. </div><div class="ttdef"><b>Definition:</b> Layer.h:66</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html_a831588e2e26c2d9161fb069304562790"><div class="ttname"><a href="classtmx_1_1_layer.html#a831588e2e26c2d9161fb069304562790">tmx::Layer::getName</a></div><div class="ttdeci">const std::string &amp; getName() const noexcept</div><div class="ttdoc">Get the name of the layer. </div><div class="ttdef"><b>Definition:</b> Layer.h:57</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:28</div></div>
+<div class="ttc" id="classtmx_1_1_map_html"><div class="ttname"><a href="classtmx_1_1_map.html">tmx::Map</a></div><div class="ttdoc">A map is a set of tilesets and a set of different layers. </div><div class="ttdef"><b>Definition:</b> Map.h:63</div></div>
 <div class="ttc" id="classtmx_1_1_layer_html_aa857d582e5fd49addd410636be49a37b"><div class="ttname"><a href="classtmx_1_1_layer.html#aa857d582e5fd49addd410636be49a37b">tmx::Layer::~Layer</a></div><div class="ttdeci">virtual ~Layer()</div><div class="ttdoc">Layer destructor. </div></div>
-<div class="ttc" id="classtmx_1_1_layer_html_a9de1797dc5b4693f539f973c92d07717"><div class="ttname"><a href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">tmx::Layer::Layer</a></div><div class="ttdeci">Layer(const std::string &amp;name, double opacity, bool visible)</div><div class="ttdoc">Layer constructor. </div><div class="ttdef"><b>Definition:</b> Layer.h:34</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:29</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html_a9de1797dc5b4693f539f973c92d07717"><div class="ttname"><a href="classtmx_1_1_layer.html#a9de1797dc5b4693f539f973c92d07717">tmx::Layer::Layer</a></div><div class="ttdeci">Layer(const std::string &amp;name, double opacity, bool visible)</div><div class="ttdoc">Layer constructor. </div><div class="ttdef"><b>Definition:</b> Layer.h:35</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:30</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html_ae317c1c871f6fc034bea58c515b45dd0"><div class="ttname"><a href="classtmx_1_1_layer.html#ae317c1c871f6fc034bea58c515b45dd0">tmx::Layer::isVisible</a></div><div class="ttdeci">bool isVisible() const noexcept</div><div class="ttdoc">Tell whether the layer is visible. </div><div class="ttdef"><b>Definition:</b> Layer.h:75</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,8 +1,8 @@
 <map id="tmx::Object" name="tmx::Object">
 <area shape="rect" id="node3" href="$classtmx_1_1_boxed.html" title="A boxed object is a geometrical object that is defined by a box. " alt="" coords="131,155,221,181"/>
-<area shape="rect" id="node6" href="$classtmx_1_1_poly_base.html" title="A &quot;polybase&quot; is a base class for lines with multiple points. " alt="" coords="251,155,359,181"/>
-<area shape="rect" id="node9" href="$classtmx_1_1_tile_object.html" title="A tile object is an image put in the map. " alt="" coords="383,155,494,181"/>
-<area shape="rect" id="node2" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="264,5,347,32"/>
+<area shape="rect" id="node6" href="$classtmx_1_1_chain.html" title="A chain is a base class for lines with multiple points. " alt="" coords="262,155,349,181"/>
+<area shape="rect" id="node9" href="$classtmx_1_1_tile_object.html" title="A tile object is an image put in the map. " alt="" coords="373,155,483,181"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_component.html" title="A base class for classes that have properties. " alt="" coords="246,5,365,32"/>
 <area shape="rect" id="node4" href="$classtmx_1_1_ellipse.html" title="An ellipse is a geometrical object. " alt="" coords="5,229,96,256"/>
 <area shape="rect" id="node5" href="$classtmx_1_1_rectangle.html" title="A rectangle is a geometrical object. " alt="" coords="121,229,231,256"/>
 <area shape="rect" id="node7" href="$classtmx_1_1_polygon.html" title="A polygon is a closed set of lines. " alt="" coords="256,229,355,256"/>

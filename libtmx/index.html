@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -45,39 +45,37 @@
 <div class="textblock"><p><code>libtmx</code> is a C++11 library for reading <a href="https://github.com/bjorn/tiled/wiki/TMX-Map-Format">TMX files</a>. TMX (Tile Map XML) is a XML dialect used in <a href="http://www.mapeditor.org/">Tiled</a>, a <a href="http://en.wikipedia.org/wiki/Tile_engine">tile map</a> editor. libtmx is not meant to modify TMX files but to read TMX files. Its main use case is for games that use TMX maps. The library is not a rendering library, so it does not depend on any graphical toolkit.</p>
 <h1>Basic usage</h1>
 <p>First, you have to parse a map file.</p>
-<div class="fragment"><div class="line"><a class="code" href="classtmx_1_1_map.html">tmx::Map</a> *map = <a class="code" href="namespacetmx.html#ac61766dceb7872834c7a26229aea58d6">tmx::parseMapFile</a>(path);</div>
+<div class="fragment"><div class="line">std::unique_ptr&lt;tmx::Map&gt; map = <a class="code" href="classtmx_1_1_map.html#a3c9a966fa3830bbf2125c8b09116454a">tmx::Map::parseFile</a>(path);</div>
 </div><!-- fragment --><p>Then, you can navigate through the map with the methods of <code><a class="el" href="classtmx_1_1_map.html" title="A map is a set of tilesets and a set of different layers. ">tmx::Map</a></code> or you can define a class that visits every layer thanks to the <a href="http://en.wikipedia.org/wiki/Visitor_pattern">visitor pattern</a>.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MyVisitor : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a> {</div>
 <div class="line"></div>
-<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a123e919971fa21381af7796462a8888b">visitTileLayer</a>(<a class="code" href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
+<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a7dad8a3cc9e95afb605744651725f324">visitTileLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
 <div class="line">    <span class="comment">// do something with this layer</span></div>
 <div class="line">  }</div>
 <div class="line"></div>
-<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#aee2b2ba7a7414c8f6df1ccf02f96eb61">visitObjectLayer</a>(<a class="code" href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
+<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a4e5d6fb3429c386f1a8fda940f85d0ae">visitObjectLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
 <div class="line">    <span class="comment">// do something with this layer</span></div>
 <div class="line">  }</div>
 <div class="line"></div>
-<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a21789e399c50b5f60dc2b9ef28ca2cb2">visitImageLayer</a>(<a class="code" href="classtmx_1_1_image_layer.html">tmx::ImageLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
+<div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a2d94f865ada50ad33df3fb43323b9385">visitImageLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image_layer.html">tmx::ImageLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
 <div class="line">    <span class="comment">// do something with this layer</span></div>
 <div class="line">  }</div>
 <div class="line"></div>
 <div class="line">}</div>
 </div><!-- fragment --><p>And then, give the visitor to the map.</p>
 <div class="fragment"><div class="line">MyVisitor visitor;</div>
-<div class="line">map-&gt;<a class="code" href="classtmx_1_1_map.html#a213a912a7d6a0457e72492533f81c510">visitLayers</a>(visitor);</div>
-</div><!-- fragment --><p>Finally, do not forget to delete the map.</p>
-<div class="fragment"><div class="line"><span class="keyword">delete</span> map;</div>
+<div class="line">map-&gt;<a class="code" href="classtmx_1_1_map.html#aa4d5da687008706d7a5c6fb13fd041a4">visitLayers</a>(visitor);</div>
 </div><!-- fragment --><p>For more information, see:</p>
 <ul>
 <li><a class="el" href="tile_rendering.html">How to render tiles with libtmx?</a></li>
 <li><a class="el" href="image_object_rendering.html">How to render image objects with libtmx?</a></li>
 </ul>
-<h1>Licence</h1>
-<p>This library is open source and is distributed under the <a href="http://opensource.org/licenses/isc-license">ISC licence</a>. </p>
+<h1>License</h1>
+<p>This library is open source and is distributed under the <a href="http://opensource.org/licenses/isc-license">ISC license</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:10 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

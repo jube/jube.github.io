@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -43,33 +43,30 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><code>libtmx</code> provides some useful tools for rendering tiles from a TMX map, even if <code>libtmx</code> is not itself a rendering library. This tutorial provides some hints on how to render tiles in a neutral way. You will have to adapt to your drawing toolkit. More precisely, we assume you use a visitor and want to render a <code><a class="el" href="classtmx_1_1_tile_layer.html" title="A tile layer is a layer with tiles in cells. ">tmx::TileLayer</a></code>. Here is the procedure.</p>
-<h2>Get the size of the map and size of the tiles</h2>
-<p>First step, let's get some information about the size of the map and the size of the tiles.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> tilewidth = map-&gt;getTileWidth();</div>
-<div class="line"><span class="keywordtype">unsigned</span> tileheight = map-&gt;getTileHeight();</div>
-<div class="line"><span class="keywordtype">unsigned</span> width = map-&gt;getWidth();</div>
-<div class="line"><span class="keywordtype">unsigned</span> height = map-&gt;getHeight();</div>
-</div><!-- fragment --><p>The resulting image will have a width of <code>width * tilewidth</code> and a height of <code>height * tileheight</code>.</p>
-<h2>Visit the layer</h2>
+<h2>Get the size of the final surface</h2>
+<p>First step, let's get some information about the size of the map and the size of the tiles to compute the size of the resulting surface.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> surface_width = map-&gt;getTileWidth() * map-&gt;getWidth();</div>
+<div class="line"><span class="keywordtype">unsigned</span> surface_height = map-&gt;getTileHeight() * map-&gt;getHeight();</div>
+</div><!-- fragment --><h2>Visit the layer</h2>
 <p>Second step, we visit the tile layer.</p>
-<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> visitTileLayer(<a class="code" href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
-<div class="line">  <span class="keywordflow">if</span> (!layer.<a class="code" href="classtmx_1_1_layer.html#a752da0994b6280640dedf393a7b2e710">isVisible</a>()) {</div>
+<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> visitTileLayer(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a>&amp; layer)<span class="keyword"> override </span>{</div>
+<div class="line">  <span class="keywordflow">if</span> (!layer.<a class="code" href="classtmx_1_1_layer.html#ae317c1c871f6fc034bea58c515b45dd0">isVisible</a>()) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="line"></div>
 <div class="line">  <span class="keywordtype">unsigned</span> k = 0;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> cell : layer) {</div>
-<div class="line">    <span class="keywordtype">unsigned</span> i = k % width;</div>
-<div class="line">    <span class="keywordtype">unsigned</span> j = k / width;</div>
-<div class="line">    assert(j &lt; height);</div>
+<div class="line">    <span class="keywordtype">unsigned</span> i = k % map.<a class="code" href="classtmx_1_1_map.html#ab8de5b6c6da7262ccb648eda58d464fa">getWidth</a>();</div>
+<div class="line">    <span class="keywordtype">unsigned</span> j = k / map.<a class="code" href="classtmx_1_1_map.html#ab8de5b6c6da7262ccb648eda58d464fa">getWidth</a>();</div>
+<div class="line">    assert(j &lt; map.<a class="code" href="classtmx_1_1_map.html#a05ceab4e1ad755cc857f2a6b2a96ec3f">getHeight</a>());</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">unsigned</span> x = i * tilewidth;</div>
-<div class="line">    <span class="keywordtype">unsigned</span> y = j * tileheight;</div>
+<div class="line">    <span class="keywordtype">unsigned</span> x = i * map.<a class="code" href="classtmx_1_1_map.html#a2eb439e0874103eb91a5ab3af2e7d8c7">getTileWidth</a>();</div>
+<div class="line">    <span class="keywordtype">unsigned</span> y = j * map.<a class="code" href="classtmx_1_1_map.html#aa48b842310b2a4d5669a4486a46d32de">getTileHeight</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">unsigned</span> gid = cell.getGID();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">if</span> (gid != 0) {</div>
-<div class="line">      drawGID(x, y, gid);</div>
+<div class="line">      drawGID(map, x, y, gid);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    k++;</div>
@@ -78,28 +75,28 @@
 </div><!-- fragment --><p>First, it's not necessary to render the layer if it's not visible. This visibility property can be set in Tiled. Then, we visit every cell in the layer. Cells are organised in a <a href="http://en.wikipedia.org/wiki/Row-major_order">row-major order</a>, so we can compute the column <code>i</code> and row <code>j</code> of the cell, and then the coordinates <code>x</code> and <code>y</code> of the tile in the rendering surface. Finally, if the <code>gid</code> is an actual <code>gid</code>, then we draw the tile.</p>
 <h2>Draw each tile</h2>
 <p>Third step, we draw each tile on the rendering surface.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> drawGID(<span class="keywordtype">unsigned</span> x, <span class="keywordtype">unsigned</span> y, <span class="keywordtype">unsigned</span> gid) {</div>
-<div class="line">  <a class="code" href="classtmx_1_1_tile_set.html">tmx::TileSet</a> *tileset = map-&gt;getTileSetFromGID(gid);</div>
-<div class="line">  gid = gid - tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#aa303c313745a5bf7bab4a815b77c9cf4">getFirstGID</a>();</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> drawGID(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">tmx::Map</a>&amp; map, <span class="keywordtype">unsigned</span> x, <span class="keywordtype">unsigned</span> y, <span class="keywordtype">unsigned</span> gid) {</div>
+<div class="line">  <a class="code" href="classtmx_1_1_tile_set.html">tmx::TileSet</a> *tileset = map.<a class="code" href="classtmx_1_1_map.html#a6db29f19673490492046af2b61c92bf7">getTileSetFromGID</a>(gid);</div>
+<div class="line">  gid = gid - tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#ac62327a0ecd282f971b78b3656b04df2">getFirstGID</a>();</div>
 <div class="line"></div>
-<div class="line">  <span class="keywordflow">if</span> (tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#a80dc750f459be999bb637b0b91279595">hasImage</a>()) {</div>
+<div class="line">  <span class="keywordflow">if</span> (tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#a4010483db89aa151e6554bfb7180e4a8">hasImage</a>()) {</div>
 <div class="line">    <span class="comment">// Tiled Qt</span></div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="classtmx_1_1_image.html">tmx::Image</a> *image = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#a6e2d31623827bffe3aade988776c200f">getImage</a>();</div>
-<div class="line">    <span class="keyword">auto</span> texture = getTexture(image-&gt;<a class="code" href="classtmx_1_1_image.html#a7a74645a6e08851e15ecbfc0b27d3fc8">getSource</a>()); <span class="comment">// depends on the toolkit</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image.html">tmx::Image</a> *image = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#ae47b6dc5058a5b2a056947b182ba22d5">getImage</a>();</div>
+<div class="line">    <span class="keyword">auto</span> texture = getTexture(image-&gt;<a class="code" href="classtmx_1_1_image.html#a51f691fdd2451ffa6f0b912d92410376">getSource</a>()); <span class="comment">// depends on the toolkit</span></div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="structtmx_1_1_size.html">tmx::Size</a> size = image-&gt;<a class="code" href="classtmx_1_1_image.html#a52f31ed4ad84a48b3a6a235ffe94464c">getSize</a>();</div>
-<div class="line">    <a class="code" href="structtmx_1_1_rect.html">tmx::Rect</a> rect = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#aa0ed52f46f816aca4d34064a24db1efa">getCoords</a>(gid, size);</div>
+<div class="line">    <a class="code" href="structtmx_1_1_size.html">tmx::Size</a> size = image-&gt;<a class="code" href="classtmx_1_1_image.html#a7f96b95aed9bffa9b6d8a34bded079bf">getSize</a>();</div>
+<div class="line">    <a class="code" href="structtmx_1_1_rect.html">tmx::Rect</a> rect = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#a63caf07c80c742d4699738505f8e1c0b">getCoords</a>(gid, size);</div>
 <div class="line"></div>
 <div class="line">    drawImage(x, y, texture, rect); <span class="comment">// depends on the toolkit</span></div>
 <div class="line"></div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
 <div class="line">    <span class="comment">// Tiled Java</span></div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="classtmx_1_1_tile.html">tmx::Tile</a> *tile = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#a88d780656c481d590fc40e7c18f2455e">getTile</a>(gid);</div>
-<div class="line">    <a class="code" href="classtmx_1_1_image.html">tmx::Image</a> *image = tile-&gt;<a class="code" href="classtmx_1_1_tile.html#abb8d4f9137e413e70baabc9ed506abc0">getImage</a>();</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_tile.html">tmx::Tile</a> *tile = tileset-&gt;<a class="code" href="classtmx_1_1_tile_set.html#aa1f1e9b80ec40970a002a2e851dd313f">getTile</a>(gid);</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image.html">tmx::Image</a> *image = tile-&gt;<a class="code" href="classtmx_1_1_tile.html#a71b46a5b190cfda745e1b992c41547ea">getImage</a>();</div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">auto</span> texture = getTexture(image-&gt;<a class="code" href="classtmx_1_1_image.html#a7a74645a6e08851e15ecbfc0b27d3fc8">getSource</a>()); <span class="comment">// depends on the toolkit</span></div>
+<div class="line">    <span class="keyword">auto</span> texture = getTexture(image-&gt;<a class="code" href="classtmx_1_1_image.html#a51f691fdd2451ffa6f0b912d92410376">getSource</a>()); <span class="comment">// depends on the toolkit</span></div>
 <div class="line">    drawImage(x, y, texture); <span class="comment">// depends on the toolkit</span></div>
 <div class="line"></div>
 <div class="line">  }</div>
@@ -110,7 +107,7 @@
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

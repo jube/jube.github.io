@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -66,69 +66,65 @@
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Layer.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;Object.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetmx.html">tmx</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html">   31</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_object_layer.html">ObjectLayer</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_layer.html">Layer</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">   36</a></span>&#160;    <a class="code" href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">ObjectLayer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> opacity, <span class="keywordtype">bool</span> visible, <span class="keyword">const</span> std::string&amp; color)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      : <a class="code" href="classtmx_1_1_layer.html">Layer</a>(name, opacity, visible), m_color(color)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a18fa329148e0fc1791d0985f1a0154dc">   44</a></span>&#160;    <a class="code" href="classtmx_1_1_object_layer.html#a18fa329148e0fc1791d0985f1a0154dc">~ObjectLayer</a>() {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> item : m_objects) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">delete</span> item;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_object_layer.html#aed45003e10a4f235bf224a26e81326d5">accept</a>(<a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a1871d9157be9f0614f64d7087982cdd2">   57</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_object_layer.html#a1871d9157be9f0614f64d7087982cdd2">getColor</a>() {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> m_color;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a0720925f51a6a30b29acfe5eb2a0594b">   66</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_object_layer.html#a0720925f51a6a30b29acfe5eb2a0594b">addObject</a>(<a class="code" href="classtmx_1_1_object.html">Object</a> *obj) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      m_objects.emplace_back(obj);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#ab385ec0ac2491ad8c33a4b8c2cd042fd">   73</a></span>&#160;    <span class="keyword">typedef</span> std::vector&lt;Object*&gt;::const_iterator <a class="code" href="classtmx_1_1_object_layer.html#ab385ec0ac2491ad8c33a4b8c2cd042fd">iterator</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#abfe6a47895aa7ff5bbbe4c97b041b07f">   80</a></span>&#160;    iterator <a class="code" href="classtmx_1_1_object_layer.html#abfe6a47895aa7ff5bbbe4c97b041b07f">begin</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> m_objects.cbegin();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a0da1917fe5671d32ebcad33cde4d291d">   89</a></span>&#160;    iterator <a class="code" href="classtmx_1_1_object_layer.html#a0da1917fe5671d32ebcad33cde4d291d">end</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> m_objects.cend();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> std::string m_color;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::vector&lt;Object*&gt; m_objects;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  };</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // TMX_OBJECT_LAYER_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_abfe6a47895aa7ff5bbbe4c97b041b07f"><div class="ttname"><a href="classtmx_1_1_object_layer.html#abfe6a47895aa7ff5bbbe4c97b041b07f">tmx::ObjectLayer::begin</a></div><div class="ttdeci">iterator begin() const </div><div class="ttdoc">Get the begin iterator on the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:80</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_a0720925f51a6a30b29acfe5eb2a0594b"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a0720925f51a6a30b29acfe5eb2a0594b">tmx::ObjectLayer::addObject</a></div><div class="ttdeci">void addObject(Object *obj)</div><div class="ttdoc">Add an object. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:66</div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:27</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_a0da1917fe5671d32ebcad33cde4d291d"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a0da1917fe5671d32ebcad33cde4d291d">tmx::ObjectLayer::end</a></div><div class="ttdeci">iterator end() const </div><div class="ttdoc">Get the end iterator on the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:89</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_a1871d9157be9f0614f64d7087982cdd2"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a1871d9157be9f0614f64d7087982cdd2">tmx::ObjectLayer::getColor</a></div><div class="ttdeci">const std::string &amp; getColor()</div><div class="ttdoc">Get the color used to display the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:57</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_aed45003e10a4f235bf224a26e81326d5"><div class="ttname"><a href="classtmx_1_1_object_layer.html#aed45003e10a4f235bf224a26e81326d5">tmx::ObjectLayer::accept</a></div><div class="ttdeci">virtual void accept(LayerVisitor &amp;visitor)</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_a18fa329148e0fc1791d0985f1a0154dc"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a18fa329148e0fc1791d0985f1a0154dc">tmx::ObjectLayer::~ObjectLayer</a></div><div class="ttdeci">~ObjectLayer()</div><div class="ttdoc">ObjectLayer destructor. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:44</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_ab385ec0ac2491ad8c33a4b8c2cd042fd"><div class="ttname"><a href="classtmx_1_1_object_layer.html#ab385ec0ac2491ad8c33a4b8c2cd042fd">tmx::ObjectLayer::iterator</a></div><div class="ttdeci">std::vector&lt; Object * &gt;::const_iterator iterator</div><div class="ttdoc">An object iterator. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:73</div></div>
-<div class="ttc" id="classtmx_1_1_object_html"><div class="ttname"><a href="classtmx_1_1_object.html">tmx::Object</a></div><div class="ttdoc">An object is a geometrical object. </div><div class="ttdef"><b>Definition:</b> Object.h:33</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html"><div class="ttname"><a href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a></div><div class="ttdoc">An object layer is a layers composed of objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:31</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:29</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html_a89f98deac9b256fcb4b4c9c087b29f56"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">tmx::ObjectLayer::ObjectLayer</a></div><div class="ttdeci">ObjectLayer(const std::string &amp;name, double opacity, bool visible, const std::string &amp;color)</div><div class="ttdoc">ObjectLayer constructor. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:36</div></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;boost/iterator/transform_iterator.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;Adaptor.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Layer.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Object.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetmx.html">tmx</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html">   34</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_object_layer.html">ObjectLayer</a> : <span class="keyword">public</span> <a class="code" href="classtmx_1_1_layer.html">Layer</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">   39</a></span>&#160;    <a class="code" href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">ObjectLayer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> opacity, <span class="keywordtype">bool</span> visible, <span class="keyword">const</span> std::string&amp; color)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      : <a class="code" href="classtmx_1_1_layer.html">Layer</a>(name, opacity, visible), m_color(color)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_object_layer.html#afba4cad09517f650ef6fda55dabf535e">accept</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a9f3b06e6f4d4e0adc00d98bec1c6ca7e">   51</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classtmx_1_1_object_layer.html#a9f3b06e6f4d4e0adc00d98bec1c6ca7e">getColor</a>() noexcept {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> m_color;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a088e524f15a1643b6a074dede873a069">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_object_layer.html#a088e524f15a1643b6a074dede873a069">addObject</a>(std::unique_ptr&lt;Object&gt; obj) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      m_objects.emplace_back(std::move(obj));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a9dd72ecf9e115bd85bbb06fb7b62dadd">   67</a></span>&#160;    <span class="keyword">typedef</span> boost::transform_iterator&lt;Adaptor, std::vector&lt;std::unique_ptr&lt;Object&gt;&gt;<a class="code" href="classtmx_1_1_object_layer.html#a9dd72ecf9e115bd85bbb06fb7b62dadd">::const_iterator</a>&gt; <a class="code" href="classtmx_1_1_object_layer.html#a9dd72ecf9e115bd85bbb06fb7b62dadd">const_iterator</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a84207caa3acf5454ceb23994c28c290c">   74</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_object_layer.html#a84207caa3acf5454ceb23994c28c290c">begin</a>() const noexcept {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> boost::make_transform_iterator&lt;Adaptor&gt;(m_objects.cbegin());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classtmx_1_1_object_layer.html#a7ae9b1088845a5b863783b2ab6c9f5a8">   83</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_object_layer.html#a7ae9b1088845a5b863783b2ab6c9f5a8">end</a>() const noexcept {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> boost::make_transform_iterator&lt;Adaptor&gt;(m_objects.cend());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> std::string m_color;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::vector&lt;std::unique_ptr&lt;Object&gt;&gt; m_objects;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // TMX_OBJECT_LAYER_H</span></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_afba4cad09517f650ef6fda55dabf535e"><div class="ttname"><a href="classtmx_1_1_object_layer.html#afba4cad09517f650ef6fda55dabf535e">tmx::ObjectLayer::accept</a></div><div class="ttdeci">virtual void accept(const Map &amp;map, LayerVisitor &amp;visitor) const override</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a088e524f15a1643b6a074dede873a069"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a088e524f15a1643b6a074dede873a069">tmx::ObjectLayer::addObject</a></div><div class="ttdeci">void addObject(std::unique_ptr&lt; Object &gt; obj)</div><div class="ttdoc">Add an object. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:60</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a9dd72ecf9e115bd85bbb06fb7b62dadd"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a9dd72ecf9e115bd85bbb06fb7b62dadd">tmx::ObjectLayer::const_iterator</a></div><div class="ttdeci">boost::transform_iterator&lt; Adaptor, std::vector&lt; std::unique_ptr&lt; Object &gt; &gt;::const_iterator &gt; const_iterator</div><div class="ttdoc">An object iterator. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:67</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a84207caa3acf5454ceb23994c28c290c"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a84207caa3acf5454ceb23994c28c290c">tmx::ObjectLayer::begin</a></div><div class="ttdeci">const_iterator begin() const noexcept</div><div class="ttdoc">Get the begin iterator on the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:74</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:28</div></div>
+<div class="ttc" id="classtmx_1_1_map_html"><div class="ttname"><a href="classtmx_1_1_map.html">tmx::Map</a></div><div class="ttdoc">A map is a set of tilesets and a set of different layers. </div><div class="ttdef"><b>Definition:</b> Map.h:63</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html"><div class="ttname"><a href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a></div><div class="ttdoc">An object layer is a layers composed of objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:34</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a7ae9b1088845a5b863783b2ab6c9f5a8"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a7ae9b1088845a5b863783b2ab6c9f5a8">tmx::ObjectLayer::end</a></div><div class="ttdeci">const_iterator end() const noexcept</div><div class="ttdoc">Get the end iterator on the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:83</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a9f3b06e6f4d4e0adc00d98bec1c6ca7e"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a9f3b06e6f4d4e0adc00d98bec1c6ca7e">tmx::ObjectLayer::getColor</a></div><div class="ttdeci">const std::string &amp; getColor() noexcept</div><div class="ttdoc">Get the color used to display the objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:51</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:30</div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html_a89f98deac9b256fcb4b4c9c087b29f56"><div class="ttname"><a href="classtmx_1_1_object_layer.html#a89f98deac9b256fcb4b4c9c087b29f56">tmx::ObjectLayer::ObjectLayer</a></div><div class="ttdeci">ObjectLayer(const std::string &amp;name, double opacity, bool visible, const std::string &amp;color)</div><div class="ttdoc">ObjectLayer constructor. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

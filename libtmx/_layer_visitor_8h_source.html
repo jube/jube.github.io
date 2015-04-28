@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -65,38 +65,40 @@
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define TMX_LAYER_VISITOR_H</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetmx.html">tmx</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">class </span>TileLayer;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">class </span>ObjectLayer;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">class </span>ImageLayer;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer_visitor.html">   27</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a87f0ae3d47174165b8cf78aba4a86e0b">~LayerVisitor</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a123e919971fa21381af7796462a8888b">visitTileLayer</a>(<a class="code" href="classtmx_1_1_tile_layer.html">TileLayer</a>&amp; layer);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#aee2b2ba7a7414c8f6df1ccf02f96eb61">visitObjectLayer</a>(<a class="code" href="classtmx_1_1_object_layer.html">ObjectLayer</a>&amp; layer);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a21789e399c50b5f60dc2b9ef28ca2cb2">visitImageLayer</a>(<a class="code" href="classtmx_1_1_image_layer.html">ImageLayer</a>&amp; layer);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">class </span>Map;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">class </span>TileLayer;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">class </span>ObjectLayer;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">class </span>ImageLayer;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classtmx_1_1_layer_visitor.html">   28</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a87f0ae3d47174165b8cf78aba4a86e0b">~LayerVisitor</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a7dad8a3cc9e95afb605744651725f324">visitTileLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_tile_layer.html">TileLayer</a>&amp; layer);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a4e5d6fb3429c386f1a8fda940f85d0ae">visitObjectLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_object_layer.html">ObjectLayer</a>&amp; layer);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_layer_visitor.html#a2d94f865ada50ad33df3fb43323b9385">visitImageLayer</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image_layer.html">ImageLayer</a>&amp; layer);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // TMX_LAYER_VISITOR_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html_a123e919971fa21381af7796462a8888b"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a123e919971fa21381af7796462a8888b">tmx::LayerVisitor::visitTileLayer</a></div><div class="ttdeci">virtual void visitTileLayer(TileLayer &amp;layer)</div><div class="ttdoc">Visit a tile layer. </div></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // TMX_LAYER_VISITOR_H</span></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html_a4e5d6fb3429c386f1a8fda940f85d0ae"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a4e5d6fb3429c386f1a8fda940f85d0ae">tmx::LayerVisitor::visitObjectLayer</a></div><div class="ttdeci">virtual void visitObjectLayer(const Map &amp;map, const ObjectLayer &amp;layer)</div><div class="ttdoc">Visit an object layer. </div></div>
 <div class="ttc" id="classtmx_1_1_layer_visitor_html_a87f0ae3d47174165b8cf78aba4a86e0b"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a87f0ae3d47174165b8cf78aba4a86e0b">tmx::LayerVisitor::~LayerVisitor</a></div><div class="ttdeci">virtual ~LayerVisitor()</div><div class="ttdoc">LayerVisitor destructor. </div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html_aee2b2ba7a7414c8f6df1ccf02f96eb61"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#aee2b2ba7a7414c8f6df1ccf02f96eb61">tmx::LayerVisitor::visitObjectLayer</a></div><div class="ttdeci">virtual void visitObjectLayer(ObjectLayer &amp;layer)</div><div class="ttdoc">Visit an object layer. </div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html_a21789e399c50b5f60dc2b9ef28ca2cb2"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a21789e399c50b5f60dc2b9ef28ca2cb2">tmx::LayerVisitor::visitImageLayer</a></div><div class="ttdeci">virtual void visitImageLayer(ImageLayer &amp;layer)</div><div class="ttdoc">Visit an image layer. </div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:27</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html_a2d94f865ada50ad33df3fb43323b9385"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a2d94f865ada50ad33df3fb43323b9385">tmx::LayerVisitor::visitImageLayer</a></div><div class="ttdeci">virtual void visitImageLayer(const Map &amp;map, const ImageLayer &amp;layer)</div><div class="ttdoc">Visit an image layer. </div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:28</div></div>
+<div class="ttc" id="classtmx_1_1_map_html"><div class="ttname"><a href="classtmx_1_1_map.html">tmx::Map</a></div><div class="ttdoc">A map is a set of tilesets and a set of different layers. </div><div class="ttdef"><b>Definition:</b> Map.h:63</div></div>
 <div class="ttc" id="classtmx_1_1_tile_layer_html"><div class="ttname"><a href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a></div><div class="ttdoc">A tile layer is a layer with tiles in cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:29</div></div>
-<div class="ttc" id="classtmx_1_1_object_layer_html"><div class="ttname"><a href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a></div><div class="ttdoc">An object layer is a layers composed of objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:31</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html_a7dad8a3cc9e95afb605744651725f324"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html#a7dad8a3cc9e95afb605744651725f324">tmx::LayerVisitor::visitTileLayer</a></div><div class="ttdeci">virtual void visitTileLayer(const Map &amp;map, const TileLayer &amp;layer)</div><div class="ttdoc">Visit a tile layer. </div></div>
+<div class="ttc" id="classtmx_1_1_object_layer_html"><div class="ttname"><a href="classtmx_1_1_object_layer.html">tmx::ObjectLayer</a></div><div class="ttdoc">An object layer is a layers composed of objects. </div><div class="ttdef"><b>Definition:</b> ObjectLayer.h:34</div></div>
 <div class="ttc" id="classtmx_1_1_image_layer_html"><div class="ttname"><a href="classtmx_1_1_image_layer.html">tmx::ImageLayer</a></div><div class="ttdoc">An image layer is a layer with a single image. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

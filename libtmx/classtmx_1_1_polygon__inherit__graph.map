@@ -1,5 +1,5 @@
 <map id="tmx::Polygon" name="tmx::Polygon">
-<area shape="rect" id="node2" href="$classtmx_1_1_poly_base.html" title="A &quot;polybase&quot; is a base class for lines with multiple points. " alt="" coords="5,155,113,181"/>
-<area shape="rect" id="node3" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="14,80,105,107"/>
-<area shape="rect" id="node4" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="18,5,101,32"/>
+<area shape="rect" id="node2" href="$classtmx_1_1_chain.html" title="A chain is a base class for lines with multiple points. " alt="" coords="21,155,108,181"/>
+<area shape="rect" id="node3" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="19,80,110,107"/>
+<area shape="rect" id="node4" href="$classtmx_1_1_component.html" title="A base class for classes that have properties. " alt="" coords="5,5,124,32"/>
 </map>

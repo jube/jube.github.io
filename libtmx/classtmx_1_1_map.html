@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -63,78 +63,111 @@
  <a href="classtmx_1_1_map.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_map_8h_source.html">tmx/Map.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for tmx::Map:</div>
+<div class="dyncontent">
+<div class="center"><img src="classtmx_1_1_map__inherit__graph.png:gd" border="0" usemap="#tmx_1_1_map_inherit__map" alt="Inheritance graph"/></div>
+<map name="tmx_1_1_map_inherit__map" id="tmx_1_1_map_inherit__map">
+<area shape="rect" id="node2" href="classtmx_1_1_component.html" title="A base class for classes that have properties. " alt="" coords="5,5,124,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab25695a6df3693e6a81d8a5711b7fb05"><td class="memItemLeft" align="right" valign="top">typedef boost::iterator_range<br class="typebreak" />
-&lt; std::vector&lt; <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> * &gt;<br class="typebreak" />
-::const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#ab25695a6df3693e6a81d8a5711b7fb05">const_tileset_range</a></td></tr>
-<tr class="memdesc:ab25695a6df3693e6a81d8a5711b7fb05"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tileset range.  <a href="#ab25695a6df3693e6a81d8a5711b7fb05">More...</a><br /></td></tr>
-<tr class="separator:ab25695a6df3693e6a81d8a5711b7fb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3624275f55f3b35dacf717f6a74fee9"><td class="memItemLeft" align="right" valign="top">typedef boost::iterator_range<br class="typebreak" />
-&lt; std::vector&lt; <a class="el" href="classtmx_1_1_layer.html">Layer</a> * &gt;<br class="typebreak" />
-::const_iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aa3624275f55f3b35dacf717f6a74fee9">const_layer_range</a></td></tr>
-<tr class="memdesc:aa3624275f55f3b35dacf717f6a74fee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A layer range.  <a href="#aa3624275f55f3b35dacf717f6a74fee9">More...</a><br /></td></tr>
-<tr class="separator:aa3624275f55f3b35dacf717f6a74fee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aefdfe23c544644bd370e430ce9fa1a"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak" />
+boost::transformed_range<br class="typebreak" />
+&lt; <a class="el" href="structtmx_1_1_adaptor.html">Adaptor</a>, const <br class="typebreak" />
+boost::iterator_range<br class="typebreak" />
+&lt; std::vector&lt; std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> &gt; &gt;::const_iterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a9aefdfe23c544644bd370e430ce9fa1a">const_tileset_range</a></td></tr>
+<tr class="memdesc:a9aefdfe23c544644bd370e430ce9fa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tileset range.  <a href="#a9aefdfe23c544644bd370e430ce9fa1a">More...</a><br /></td></tr>
+<tr class="separator:a9aefdfe23c544644bd370e430ce9fa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4906d12d83e2ffea0aaeb62865d7808d"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak" />
+boost::transformed_range<br class="typebreak" />
+&lt; <a class="el" href="structtmx_1_1_adaptor.html">Adaptor</a>, const <br class="typebreak" />
+boost::iterator_range<br class="typebreak" />
+&lt; std::vector&lt; std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classtmx_1_1_layer.html">Layer</a> &gt; &gt;::const_iterator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a4906d12d83e2ffea0aaeb62865d7808d">const_layer_range</a></td></tr>
+<tr class="memdesc:a4906d12d83e2ffea0aaeb62865d7808d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A layer range.  <a href="#a4906d12d83e2ffea0aaeb62865d7808d">More...</a><br /></td></tr>
+<tr class="separator:a4906d12d83e2ffea0aaeb62865d7808d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa089f8b3bd531ea9840f5e8f3da9e0bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aa089f8b3bd531ea9840f5e8f3da9e0bc">Map</a> (const std::string version, <a class="el" href="namespacetmx.html#a783413653e11e900412d850b3cc64f6f">Orientation</a> orientation, unsigned width, unsigned height, unsigned tilewidth, unsigned tileheight, const std::string &amp;bgcolor)</td></tr>
-<tr class="memdesc:aa089f8b3bd531ea9840f5e8f3da9e0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtmx_1_1_map.html" title="A map is a set of tilesets and a set of different layers. ">Map</a> constructor.  <a href="#aa089f8b3bd531ea9840f5e8f3da9e0bc">More...</a><br /></td></tr>
-<tr class="separator:aa089f8b3bd531ea9840f5e8f3da9e0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5f220f63d416f0ddbca99dd66b7725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a5e5f220f63d416f0ddbca99dd66b7725">~Map</a> ()</td></tr>
-<tr class="memdesc:a5e5f220f63d416f0ddbca99dd66b7725"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtmx_1_1_map.html" title="A map is a set of tilesets and a set of different layers. ">Map</a> destructor.  <a href="#a5e5f220f63d416f0ddbca99dd66b7725">More...</a><br /></td></tr>
-<tr class="separator:a5e5f220f63d416f0ddbca99dd66b7725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15531efa95b8650599cc9bcb98ac6d89"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a15531efa95b8650599cc9bcb98ac6d89">getVersion</a> () const </td></tr>
-<tr class="memdesc:a15531efa95b8650599cc9bcb98ac6d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the TMX format.  <a href="#a15531efa95b8650599cc9bcb98ac6d89">More...</a><br /></td></tr>
-<tr class="separator:a15531efa95b8650599cc9bcb98ac6d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40faa7552e3dbb93d29e310c96c249bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetmx.html#a783413653e11e900412d850b3cc64f6f">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a40faa7552e3dbb93d29e310c96c249bc">getOrientation</a> () const </td></tr>
-<tr class="memdesc:a40faa7552e3dbb93d29e310c96c249bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the orientation of the map.  <a href="#a40faa7552e3dbb93d29e310c96c249bc">More...</a><br /></td></tr>
-<tr class="separator:a40faa7552e3dbb93d29e310c96c249bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83a55a7294be683c61f78e145d921935"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a83a55a7294be683c61f78e145d921935">getWidth</a> () const </td></tr>
-<tr class="memdesc:a83a55a7294be683c61f78e145d921935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the map.  <a href="#a83a55a7294be683c61f78e145d921935">More...</a><br /></td></tr>
-<tr class="separator:a83a55a7294be683c61f78e145d921935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e87b1de49622dfd3a2d24d2f5e29295"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a8e87b1de49622dfd3a2d24d2f5e29295">getHeight</a> () const </td></tr>
-<tr class="memdesc:a8e87b1de49622dfd3a2d24d2f5e29295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the map.  <a href="#a8e87b1de49622dfd3a2d24d2f5e29295">More...</a><br /></td></tr>
-<tr class="separator:a8e87b1de49622dfd3a2d24d2f5e29295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a908e41cb6af16fe57e82af0363091275"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a908e41cb6af16fe57e82af0363091275">getTileWidth</a> () const </td></tr>
-<tr class="memdesc:a908e41cb6af16fe57e82af0363091275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of tiles.  <a href="#a908e41cb6af16fe57e82af0363091275">More...</a><br /></td></tr>
-<tr class="separator:a908e41cb6af16fe57e82af0363091275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18a2671ce52dd870f7a9df943b13b62"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#ae18a2671ce52dd870f7a9df943b13b62">getTileHeight</a> () const </td></tr>
-<tr class="memdesc:ae18a2671ce52dd870f7a9df943b13b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of tiles.  <a href="#ae18a2671ce52dd870f7a9df943b13b62">More...</a><br /></td></tr>
-<tr class="separator:ae18a2671ce52dd870f7a9df943b13b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3e39e75da527a010955b0373e423394"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#af3e39e75da527a010955b0373e423394">getBackgroundColor</a> () const </td></tr>
-<tr class="memdesc:af3e39e75da527a010955b0373e423394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the background color.  <a href="#af3e39e75da527a010955b0373e423394">More...</a><br /></td></tr>
-<tr class="separator:af3e39e75da527a010955b0373e423394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e385ea15b4a3df416fba42696314566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a0e385ea15b4a3df416fba42696314566">addTileSet</a> (<a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> *tileset)</td></tr>
-<tr class="memdesc:a0e385ea15b4a3df416fba42696314566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a tileset.  <a href="#a0e385ea15b4a3df416fba42696314566">More...</a><br /></td></tr>
-<tr class="separator:a0e385ea15b4a3df416fba42696314566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d71ed9100ffd07978a59431b78ec28e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_map.html#ab25695a6df3693e6a81d8a5711b7fb05">const_tileset_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a9d71ed9100ffd07978a59431b78ec28e">getTileSets</a> () const </td></tr>
-<tr class="memdesc:a9d71ed9100ffd07978a59431b78ec28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tilesets.  <a href="#a9d71ed9100ffd07978a59431b78ec28e">More...</a><br /></td></tr>
-<tr class="separator:a9d71ed9100ffd07978a59431b78ec28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0036eac7994ba0b74cfcc77d7102ab50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a0036eac7994ba0b74cfcc77d7102ab50">addLayer</a> (<a class="el" href="classtmx_1_1_layer.html">Layer</a> *layer)</td></tr>
-<tr class="memdesc:a0036eac7994ba0b74cfcc77d7102ab50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a layer.  <a href="#a0036eac7994ba0b74cfcc77d7102ab50">More...</a><br /></td></tr>
-<tr class="separator:a0036eac7994ba0b74cfcc77d7102ab50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa34c68ee8efea0a48f5dd5b2373580b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_map.html#aa3624275f55f3b35dacf717f6a74fee9">const_layer_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aa34c68ee8efea0a48f5dd5b2373580b8">getLayers</a> () const </td></tr>
-<tr class="memdesc:aa34c68ee8efea0a48f5dd5b2373580b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the layers.  <a href="#aa34c68ee8efea0a48f5dd5b2373580b8">More...</a><br /></td></tr>
-<tr class="separator:aa34c68ee8efea0a48f5dd5b2373580b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a213a912a7d6a0457e72492533f81c510"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a213a912a7d6a0457e72492533f81c510">visitLayers</a> (<a class="el" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a> &amp;visitor)</td></tr>
-<tr class="memdesc:a213a912a7d6a0457e72492533f81c510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit the layers with a visitor.  <a href="#a213a912a7d6a0457e72492533f81c510">More...</a><br /></td></tr>
-<tr class="separator:a213a912a7d6a0457e72492533f81c510"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af95d3d5eea69fab7c1d927b1ccd1f411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#af95d3d5eea69fab7c1d927b1ccd1f411">getTileSetFromGID</a> (unsigned gid)</td></tr>
-<tr class="memdesc:af95d3d5eea69fab7c1d927b1ccd1f411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tileset corresponding to a global id.  <a href="#af95d3d5eea69fab7c1d927b1ccd1f411">More...</a><br /></td></tr>
-<tr class="separator:af95d3d5eea69fab7c1d927b1ccd1f411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d16ace6ecf2cb455868987a9ec23fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a13d16ace6ecf2cb455868987a9ec23fe">Map</a> (const std::string version, <a class="el" href="namespacetmx.html#a783413653e11e900412d850b3cc64f6f">Orientation</a> orientation, unsigned width, unsigned height, unsigned tilewidth, unsigned tileheight, const std::string &amp;bgcolor, <a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">RenderOrder</a> render_order)</td></tr>
+<tr class="memdesc:a13d16ace6ecf2cb455868987a9ec23fe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtmx_1_1_map.html" title="A map is a set of tilesets and a set of different layers. ">Map</a> constructor.  <a href="#a13d16ace6ecf2cb455868987a9ec23fe">More...</a><br /></td></tr>
+<tr class="separator:a13d16ace6ecf2cb455868987a9ec23fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Properties</div></td></tr>
+<tr class="memitem:aad69426540fbe7798887fd3580df31a0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aad69426540fbe7798887fd3580df31a0">getVersion</a> () const noexcept</td></tr>
+<tr class="memdesc:aad69426540fbe7798887fd3580df31a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the TMX format.  <a href="#aad69426540fbe7798887fd3580df31a0">More...</a><br /></td></tr>
+<tr class="separator:aad69426540fbe7798887fd3580df31a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5a3c15cae69fbe48187bf380796c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetmx.html#a783413653e11e900412d850b3cc64f6f">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#acb5a3c15cae69fbe48187bf380796c56">getOrientation</a> () const noexcept</td></tr>
+<tr class="memdesc:acb5a3c15cae69fbe48187bf380796c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the orientation of the map.  <a href="#acb5a3c15cae69fbe48187bf380796c56">More...</a><br /></td></tr>
+<tr class="separator:acb5a3c15cae69fbe48187bf380796c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8de5b6c6da7262ccb648eda58d464fa"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#ab8de5b6c6da7262ccb648eda58d464fa">getWidth</a> () const noexcept</td></tr>
+<tr class="memdesc:ab8de5b6c6da7262ccb648eda58d464fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the map.  <a href="#ab8de5b6c6da7262ccb648eda58d464fa">More...</a><br /></td></tr>
+<tr class="separator:ab8de5b6c6da7262ccb648eda58d464fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ceab4e1ad755cc857f2a6b2a96ec3f"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a05ceab4e1ad755cc857f2a6b2a96ec3f">getHeight</a> () const noexcept</td></tr>
+<tr class="memdesc:a05ceab4e1ad755cc857f2a6b2a96ec3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the map.  <a href="#a05ceab4e1ad755cc857f2a6b2a96ec3f">More...</a><br /></td></tr>
+<tr class="separator:a05ceab4e1ad755cc857f2a6b2a96ec3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb439e0874103eb91a5ab3af2e7d8c7"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a2eb439e0874103eb91a5ab3af2e7d8c7">getTileWidth</a> () const noexcept</td></tr>
+<tr class="memdesc:a2eb439e0874103eb91a5ab3af2e7d8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of tiles.  <a href="#a2eb439e0874103eb91a5ab3af2e7d8c7">More...</a><br /></td></tr>
+<tr class="separator:a2eb439e0874103eb91a5ab3af2e7d8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48b842310b2a4d5669a4486a46d32de"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aa48b842310b2a4d5669a4486a46d32de">getTileHeight</a> () const noexcept</td></tr>
+<tr class="memdesc:aa48b842310b2a4d5669a4486a46d32de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of tiles.  <a href="#aa48b842310b2a4d5669a4486a46d32de">More...</a><br /></td></tr>
+<tr class="separator:aa48b842310b2a4d5669a4486a46d32de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e19483d683af21a99ac5680d34498a0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a3e19483d683af21a99ac5680d34498a0">getBackgroundColor</a> () const noexcept</td></tr>
+<tr class="memdesc:a3e19483d683af21a99ac5680d34498a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the background color.  <a href="#a3e19483d683af21a99ac5680d34498a0">More...</a><br /></td></tr>
+<tr class="separator:a3e19483d683af21a99ac5680d34498a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df3788ded0af3a5da110ab7f4abd905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">RenderOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a7df3788ded0af3a5da110ab7f4abd905">getRenderOrder</a> () const noexcept</td></tr>
+<tr class="memdesc:a7df3788ded0af3a5da110ab7f4abd905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the render order.  <a href="#a7df3788ded0af3a5da110ab7f4abd905">More...</a><br /></td></tr>
+<tr class="separator:a7df3788ded0af3a5da110ab7f4abd905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Tileset handling</div></td></tr>
+<tr class="memitem:a2094d991f76ac533556ea18aaf372ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a2094d991f76ac533556ea18aaf372ddc">addTileSet</a> (std::unique_ptr&lt; <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> &gt; tileset)</td></tr>
+<tr class="memdesc:a2094d991f76ac533556ea18aaf372ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a tileset.  <a href="#a2094d991f76ac533556ea18aaf372ddc">More...</a><br /></td></tr>
+<tr class="separator:a2094d991f76ac533556ea18aaf372ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdae9f4452e2aad63f4689acfd3342c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_map.html#a9aefdfe23c544644bd370e430ce9fa1a">const_tileset_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a9fdae9f4452e2aad63f4689acfd3342c">getTileSets</a> () const noexcept</td></tr>
+<tr class="memdesc:a9fdae9f4452e2aad63f4689acfd3342c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tilesets.  <a href="#a9fdae9f4452e2aad63f4689acfd3342c">More...</a><br /></td></tr>
+<tr class="separator:a9fdae9f4452e2aad63f4689acfd3342c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db29f19673490492046af2b61c92bf7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a6db29f19673490492046af2b61c92bf7">getTileSetFromGID</a> (unsigned gid) const noexcept</td></tr>
+<tr class="memdesc:a6db29f19673490492046af2b61c92bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tileset corresponding to a global id.  <a href="#a6db29f19673490492046af2b61c92bf7">More...</a><br /></td></tr>
+<tr class="separator:a6db29f19673490492046af2b61c92bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Layer handling</div></td></tr>
+<tr class="memitem:a10fb7e20c9db367872115032ac23e8a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a10fb7e20c9db367872115032ac23e8a0">addLayer</a> (std::unique_ptr&lt; <a class="el" href="classtmx_1_1_layer.html">Layer</a> &gt; layer)</td></tr>
+<tr class="memdesc:a10fb7e20c9db367872115032ac23e8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a layer.  <a href="#a10fb7e20c9db367872115032ac23e8a0">More...</a><br /></td></tr>
+<tr class="separator:a10fb7e20c9db367872115032ac23e8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd697a3d74c214a6ba3b3d4e125c140"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtmx_1_1_map.html#a4906d12d83e2ffea0aaeb62865d7808d">const_layer_range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#adfd697a3d74c214a6ba3b3d4e125c140">getLayers</a> () const noexcept</td></tr>
+<tr class="memdesc:adfd697a3d74c214a6ba3b3d4e125c140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the layers.  <a href="#adfd697a3d74c214a6ba3b3d4e125c140">More...</a><br /></td></tr>
+<tr class="separator:adfd697a3d74c214a6ba3b3d4e125c140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d5da687008706d7a5c6fb13fd041a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#aa4d5da687008706d7a5c6fb13fd041a4">visitLayers</a> (<a class="el" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a> &amp;visitor) const </td></tr>
+<tr class="memdesc:aa4d5da687008706d7a5c6fb13fd041a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit the layers with a visitor.  <a href="#aa4d5da687008706d7a5c6fb13fd041a4">More...</a><br /></td></tr>
+<tr class="separator:aa4d5da687008706d7a5c6fb13fd041a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classtmx_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classtmx_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classtmx_1_1_component.html">tmx::Component</a></td></tr>
+<tr class="memitem:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#a99bc97b0d0ec71c3630464ec86c51c69">hasProperty</a> (const std::string &amp;key) const noexcept</td></tr>
+<tr class="memdesc:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell if the object has a given property.  <a href="#a99bc97b0d0ec71c3630464ec86c51c69">More...</a><br /></td></tr>
+<tr class="separator:a99bc97b0d0ec71c3630464ec86c51c69 inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#a740163d2f8c2faf7ff33f7dd7c67fe23">getProperty</a> (const std::string &amp;key, const std::string &amp;def) const noexcept</td></tr>
+<tr class="memdesc:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a property value.  <a href="#a740163d2f8c2faf7ff33f7dd7c67fe23">More...</a><br /></td></tr>
+<tr class="separator:a740163d2f8c2faf7ff33f7dd7c67fe23 inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_component.html#af59293749d0dbf8f5ca78e733101eb5e">addProperty</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a property.  <a href="#af59293749d0dbf8f5ca78e733101eb5e">More...</a><br /></td></tr>
+<tr class="separator:af59293749d0dbf8f5ca78e733101eb5e inherit pub_methods_classtmx_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Map parsing</div></td></tr>
+<tr class="memitem:a3c9a966fa3830bbf2125c8b09116454a"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classtmx_1_1_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtmx_1_1_map.html#a3c9a966fa3830bbf2125c8b09116454a">parseFile</a> (const boost::filesystem::path &amp;filename)</td></tr>
+<tr class="memdesc:a3c9a966fa3830bbf2125c8b09116454a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a TMX file.  <a href="#a3c9a966fa3830bbf2125c8b09116454a">More...</a><br /></td></tr>
+<tr class="separator:a3c9a966fa3830bbf2125c8b09116454a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A map is a set of tilesets and a set of different layers. </p>
 <p>Tilesets describe what to draw while layers describe how to draw things. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="aa3624275f55f3b35dacf717f6a74fee9"></a>
+<a class="anchor" id="a4906d12d83e2ffea0aaeb62865d7808d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::iterator_range&lt;std::vector&lt;<a class="el" href="classtmx_1_1_layer.html">Layer</a>*&gt;::const_iterator&gt; <a class="el" href="classtmx_1_1_map.html#aa3624275f55f3b35dacf717f6a74fee9">tmx::Map::const_layer_range</a></td>
+          <td class="memname">typedef boost::transformed_range&lt;<a class="el" href="structtmx_1_1_adaptor.html">Adaptor</a>, const boost::iterator_range&lt;std::vector&lt;std::unique_ptr&lt;<a class="el" href="classtmx_1_1_layer.html">Layer</a>&gt; &gt;::const_iterator&gt; &gt; <a class="el" href="classtmx_1_1_map.html#a4906d12d83e2ffea0aaeb62865d7808d">tmx::Map::const_layer_range</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -143,12 +176,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab25695a6df3693e6a81d8a5711b7fb05"></a>
+<a class="anchor" id="a9aefdfe23c544644bd370e430ce9fa1a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::iterator_range&lt;std::vector&lt;<a class="el" href="classtmx_1_1_tile_set.html">TileSet</a>*&gt;::const_iterator&gt; <a class="el" href="classtmx_1_1_map.html#ab25695a6df3693e6a81d8a5711b7fb05">tmx::Map::const_tileset_range</a></td>
+          <td class="memname">typedef boost::transformed_range&lt;<a class="el" href="structtmx_1_1_adaptor.html">Adaptor</a>, const boost::iterator_range&lt;std::vector&lt;std::unique_ptr&lt;<a class="el" href="classtmx_1_1_tile_set.html">TileSet</a>&gt; &gt;::const_iterator&gt; &gt; <a class="el" href="classtmx_1_1_map.html#a9aefdfe23c544644bd370e430ce9fa1a">tmx::Map::const_tileset_range</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,7 +191,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa089f8b3bd531ea9840f5e8f3da9e0bc"></a>
+<a class="anchor" id="a13d16ace6ecf2cb455868987a9ec23fe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,7 +238,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>bgcolor</em>&#160;</td>
+          <td class="paramname"><em>bgcolor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">RenderOrder</a>&#160;</td>
+          <td class="paramname"><em>render_order</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,33 +263,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5e5f220f63d416f0ddbca99dd66b7725"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">tmx::Map::~Map </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classtmx_1_1_map.html" title="A map is a set of tilesets and a set of different layers. ">Map</a> destructor. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0036eac7994ba0b74cfcc77d7102ab50"></a>
+<a class="anchor" id="a10fb7e20c9db367872115032ac23e8a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -260,7 +274,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void tmx::Map::addLayer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classtmx_1_1_layer.html">Layer</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classtmx_1_1_layer.html">Layer</a> &gt;&#160;</td>
           <td class="paramname"><em>layer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -282,7 +296,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0e385ea15b4a3df416fba42696314566"></a>
+<a class="anchor" id="a2094d991f76ac533556ea18aaf372ddc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -292,7 +306,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void tmx::Map::addTileSet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a> &gt;&#160;</td>
           <td class="paramname"><em>tileset</em></td><td>)</td>
           <td></td>
         </tr>
@@ -314,7 +328,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af3e39e75da527a010955b0373e423394"></a>
+<a class="anchor" id="a3e19483d683af21a99ac5680d34498a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -330,7 +344,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -340,7 +354,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8e87b1de49622dfd3a2d24d2f5e29295"></a>
+<a class="anchor" id="a05ceab4e1ad755cc857f2a6b2a96ec3f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -356,7 +370,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -366,7 +380,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa34c68ee8efea0a48f5dd5b2373580b8"></a>
+<a class="anchor" id="adfd697a3d74c214a6ba3b3d4e125c140"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -374,7 +388,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtmx_1_1_map.html#aa3624275f55f3b35dacf717f6a74fee9">const_layer_range</a> tmx::Map::getLayers </td>
+          <td class="memname"><a class="el" href="classtmx_1_1_map.html#a4906d12d83e2ffea0aaeb62865d7808d">const_layer_range</a> tmx::Map::getLayers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -382,7 +396,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -392,7 +406,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a40faa7552e3dbb93d29e310c96c249bc"></a>
+<a class="anchor" id="acb5a3c15cae69fbe48187bf380796c56"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -408,7 +422,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -418,7 +432,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae18a2671ce52dd870f7a9df943b13b62"></a>
+<a class="anchor" id="a7df3788ded0af3a5da110ab7f4abd905"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetmx.html#a35355db009c92c3e50a152fc25f51705">RenderOrder</a> tmx::Map::getRenderOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the render order. </p>
+<dl class="section return"><dt>Returns</dt><dd>the render order </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa48b842310b2a4d5669a4486a46d32de"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -434,7 +474,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -444,18 +484,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af95d3d5eea69fab7c1d927b1ccd1f411"></a>
+<a class="anchor" id="a6db29f19673490492046af2b61c92bf7"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtmx_1_1_tile_set.html">TileSet</a>* tmx::Map::getTileSetFromGID </td>
+          <td class="memname">const <a class="el" href="classtmx_1_1_tile_set.html">TileSet</a>* tmx::Map::getTileSetFromGID </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>gid</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the tileset corresponding to a global id. </p>
@@ -469,7 +517,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d71ed9100ffd07978a59431b78ec28e"></a>
+<a class="anchor" id="a9fdae9f4452e2aad63f4689acfd3342c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -477,7 +525,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtmx_1_1_map.html#ab25695a6df3693e6a81d8a5711b7fb05">const_tileset_range</a> tmx::Map::getTileSets </td>
+          <td class="memname"><a class="el" href="classtmx_1_1_map.html#a9aefdfe23c544644bd370e430ce9fa1a">const_tileset_range</a> tmx::Map::getTileSets </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -485,7 +533,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -495,7 +543,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a908e41cb6af16fe57e82af0363091275"></a>
+<a class="anchor" id="a2eb439e0874103eb91a5ab3af2e7d8c7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -511,7 +559,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -521,7 +569,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a15531efa95b8650599cc9bcb98ac6d89"></a>
+<a class="anchor" id="aad69426540fbe7798887fd3580df31a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -537,7 +585,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -547,7 +595,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a83a55a7294be683c61f78e145d921935"></a>
+<a class="anchor" id="ab8de5b6c6da7262ccb648eda58d464fa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -563,7 +611,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -573,7 +621,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a213a912a7d6a0457e72492533f81c510"></a>
+<a class="anchor" id="a3c9a966fa3830bbf2125c8b09116454a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt;<a class="el" href="classtmx_1_1_map.html">Map</a>&gt; tmx::Map::parseFile </td>
+          <td>(</td>
+          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a TMX file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>the name of the TMX file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a map </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4d5da687008706d7a5c6fb13fd041a4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -585,7 +666,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a> &amp;&#160;</td>
           <td class="paramname"><em>visitor</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -608,7 +689,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

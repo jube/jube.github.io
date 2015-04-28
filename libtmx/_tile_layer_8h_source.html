@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -78,7 +78,7 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_tile_layer.html#a98781f4549a341b8ab3ba8bec3fe5d57">accept</a>(<a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_tile_layer.html#ab7b49dd8960e15896572ec8be028c5e7">accept</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#acf82a7c7b6e13caa32a1c10ec306a9ca">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_tile_layer.html#acf82a7c7b6e13caa32a1c10ec306a9ca">addCell</a>(<a class="code" href="classtmx_1_1_cell.html">Cell</a> cell) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      m_cells.emplace_back(cell);</div>
@@ -86,11 +86,11 @@
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#af042a8b2238c731d70ad9cfe9c9f0492">   53</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;Cell&gt;::const_iterator <a class="code" href="classtmx_1_1_tile_layer.html#af042a8b2238c731d70ad9cfe9c9f0492">const_iterator</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#ab0a2b91d3b143767acfa2034a64f756c">   60</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_tile_layer.html#ab0a2b91d3b143767acfa2034a64f756c">begin</a>() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#a64ee3063939d981b5f8a80393b18ccf3">   60</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_tile_layer.html#a64ee3063939d981b5f8a80393b18ccf3">begin</a>() const noexcept {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> m_cells.cbegin();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#a1abfba7ba03960493c35f259f63a316b">   69</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_tile_layer.html#a1abfba7ba03960493c35f259f63a316b">end</a>() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classtmx_1_1_tile_layer.html#a90f17c6b47feb53b93e2b5175d772410">   69</a></span>&#160;    const_iterator <a class="code" href="classtmx_1_1_tile_layer.html#a90f17c6b47feb53b93e2b5175d772410">end</a>() const noexcept {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> m_cells.cend();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
@@ -101,21 +101,22 @@
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif // TMX_LAYER_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
 <div class="ttc" id="classtmx_1_1_tile_layer_html_af042a8b2238c731d70ad9cfe9c9f0492"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#af042a8b2238c731d70ad9cfe9c9f0492">tmx::TileLayer::const_iterator</a></div><div class="ttdeci">std::vector&lt; Cell &gt;::const_iterator const_iterator</div><div class="ttdoc">A cell iterator. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:53</div></div>
-<div class="ttc" id="classtmx_1_1_tile_layer_html_a1abfba7ba03960493c35f259f63a316b"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#a1abfba7ba03960493c35f259f63a316b">tmx::TileLayer::end</a></div><div class="ttdeci">const_iterator end()</div><div class="ttdoc">Get the end iterator on the cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:69</div></div>
-<div class="ttc" id="classtmx_1_1_tile_layer_html_ab0a2b91d3b143767acfa2034a64f756c"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#ab0a2b91d3b143767acfa2034a64f756c">tmx::TileLayer::begin</a></div><div class="ttdeci">const_iterator begin()</div><div class="ttdoc">Get the begin iterator on the cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:60</div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:27</div></div>
+<div class="ttc" id="classtmx_1_1_tile_layer_html_ab7b49dd8960e15896572ec8be028c5e7"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#ab7b49dd8960e15896572ec8be028c5e7">tmx::TileLayer::accept</a></div><div class="ttdeci">virtual void accept(const Map &amp;map, LayerVisitor &amp;visitor) const override</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
+<div class="ttc" id="classtmx_1_1_tile_layer_html_a64ee3063939d981b5f8a80393b18ccf3"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#a64ee3063939d981b5f8a80393b18ccf3">tmx::TileLayer::begin</a></div><div class="ttdeci">const_iterator begin() const noexcept</div><div class="ttdoc">Get the begin iterator on the cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:60</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:28</div></div>
+<div class="ttc" id="classtmx_1_1_map_html"><div class="ttname"><a href="classtmx_1_1_map.html">tmx::Map</a></div><div class="ttdoc">A map is a set of tilesets and a set of different layers. </div><div class="ttdef"><b>Definition:</b> Map.h:63</div></div>
+<div class="ttc" id="classtmx_1_1_tile_layer_html_a90f17c6b47feb53b93e2b5175d772410"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#a90f17c6b47feb53b93e2b5175d772410">tmx::TileLayer::end</a></div><div class="ttdeci">const_iterator end() const noexcept</div><div class="ttdoc">Get the end iterator on the cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:69</div></div>
 <div class="ttc" id="classtmx_1_1_tile_layer_html_a72fdb282107c04c02cca11b9f666a438"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#a72fdb282107c04c02cca11b9f666a438">tmx::TileLayer::TileLayer</a></div><div class="ttdeci">TileLayer(const std::string &amp;name, double opacity, bool visible)</div><div class="ttdoc">TileLayer constructor. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:34</div></div>
-<div class="ttc" id="classtmx_1_1_tile_layer_html_a98781f4549a341b8ab3ba8bec3fe5d57"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#a98781f4549a341b8ab3ba8bec3fe5d57">tmx::TileLayer::accept</a></div><div class="ttdeci">virtual void accept(LayerVisitor &amp;visitor)</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
 <div class="ttc" id="classtmx_1_1_tile_layer_html"><div class="ttname"><a href="classtmx_1_1_tile_layer.html">tmx::TileLayer</a></div><div class="ttdoc">A tile layer is a layer with tiles in cells. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:29</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:29</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:30</div></div>
 <div class="ttc" id="classtmx_1_1_tile_layer_html_acf82a7c7b6e13caa32a1c10ec306a9ca"><div class="ttname"><a href="classtmx_1_1_tile_layer.html#acf82a7c7b6e13caa32a1c10ec306a9ca">tmx::TileLayer::addCell</a></div><div class="ttdeci">void addCell(Cell cell)</div><div class="ttdoc">Add a cell to the layer. </div><div class="ttdef"><b>Definition:</b> TileLayer.h:46</div></div>
 <div class="ttc" id="classtmx_1_1_cell_html"><div class="ttname"><a href="classtmx_1_1_cell.html">tmx::Cell</a></div><div class="ttdoc">A cell is a square on a map layer that is filled with a tile. </div><div class="ttdef"><b>Definition:</b> Cell.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

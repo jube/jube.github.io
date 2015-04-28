@@ -1,18 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtmx_1_1_base.html" title="A base class for classes that have properties. " alt="" coords="5,220,88,247"/>
-<area shape="rect" id="node2" href="$classtmx_1_1_layer.html" title="A layer is a layer in the whole map. " alt="" coords="141,93,225,120"/>
-<area shape="rect" id="node6" href="$classtmx_1_1_object.html" title="An object is a geometrical object. " alt="" coords="137,169,228,196"/>
-<area shape="rect" id="node14" href="$classtmx_1_1_terrain.html" title="A terrain describes a kind of terrain on the map. " alt="" coords="137,220,229,247"/>
-<area shape="rect" id="node15" href="$classtmx_1_1_tile.html" title="A tile is a rectangular part of a tileset. " alt="" coords="146,271,219,297"/>
-<area shape="rect" id="node16" href="$classtmx_1_1_tile_set.html" title="A tileset is a set of tiles in a single file (image or TSX file). " alt="" coords="136,321,229,348"/>
-<area shape="rect" id="node3" href="$classtmx_1_1_image_layer.html" title="An image layer is a layer with a single image. " alt="" coords="279,5,399,32"/>
-<area shape="rect" id="node4" href="$classtmx_1_1_object_layer.html" title="An object layer is a layers composed of objects. " alt="" coords="277,56,400,83"/>
-<area shape="rect" id="node5" href="$classtmx_1_1_tile_layer.html" title="A tile layer is a layer with tiles in cells. " alt="" coords="286,107,391,133"/>
-<area shape="rect" id="node7" href="$classtmx_1_1_boxed.html" title="A boxed object is a geometrical object that is defined by a box. " alt="" coords="294,157,383,184"/>
-<area shape="rect" id="node10" href="$classtmx_1_1_poly_base.html" title="A &quot;polybase&quot; is a base class for lines with multiple points. " alt="" coords="285,208,393,235"/>
-<area shape="rect" id="node13" href="$classtmx_1_1_tile_object.html" title="A tile object is an image put in the map. " alt="" coords="283,259,394,285"/>
-<area shape="rect" id="node8" href="$classtmx_1_1_ellipse.html" title="An ellipse is a geometrical object. " alt="" coords="458,107,549,133"/>
-<area shape="rect" id="node9" href="$classtmx_1_1_rectangle.html" title="A rectangle is a geometrical object. " alt="" coords="448,157,559,184"/>
-<area shape="rect" id="node11" href="$classtmx_1_1_polygon.html" title="A polygon is a closed set of lines. " alt="" coords="454,208,553,235"/>
-<area shape="rect" id="node12" href="$classtmx_1_1_polyline.html" title="A polyline is an open set of lines. " alt="" coords="454,259,553,285"/>
+<area shape="rect" id="node1" href="$structtmx_1_1_adaptor.html" title="An adaptor to get raw pointer from a unique pointer. " alt="" coords="5,5,103,32"/>
 </map>

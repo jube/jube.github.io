@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -76,41 +76,37 @@
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classtmx_1_1_image_layer.html#a5ad55ef9b12e094eda1980aabdd0fc0c">   40</a></span>&#160;    <a class="code" href="classtmx_1_1_image_layer.html#a5ad55ef9b12e094eda1980aabdd0fc0c">~ImageLayer</a>() {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">delete</span> m_image;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_image_layer.html#ab51c8f6c3ce15886f4ce9024397a0425">accept</a>(<a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classtmx_1_1_image_layer.html#a34a0e6300eec50e28dca6ca510fe9d79">   51</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_image_layer.html#a34a0e6300eec50e28dca6ca510fe9d79">setImage</a>(<a class="code" href="classtmx_1_1_image.html">Image</a> *image) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      m_image = image;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classtmx_1_1_image_layer.html#a5ab034e9fcffe63b5412dbc17f6eb6f4">   60</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image.html">Image</a> *<a class="code" href="classtmx_1_1_image_layer.html#a5ab034e9fcffe63b5412dbc17f6eb6f4">getImage</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> m_image;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image.html">Image</a> *m_image;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // TMX_IMAGE_LAYER_H</span></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_image_layer.html#a76a488591992fd478231894524679f34">accept</a>(<span class="keyword">const</span> <a class="code" href="classtmx_1_1_map.html">Map</a>&amp; map, <a class="code" href="classtmx_1_1_layer_visitor.html">LayerVisitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classtmx_1_1_image_layer.html#aeb7e3e131661d5aad59c57290f6a3645">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtmx_1_1_image_layer.html#aeb7e3e131661d5aad59c57290f6a3645">setImage</a>(std::unique_ptr&lt;Image&gt; image) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      m_image = std::move(image);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classtmx_1_1_image_layer.html#a0c694e8c86c477ab2e93f33833864e36">   53</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classtmx_1_1_image.html">Image</a> *<a class="code" href="classtmx_1_1_image_layer.html#a0c694e8c86c477ab2e93f33833864e36">getImage</a>() const noexcept {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordflow">return</span> m_image.get();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::unique_ptr&lt;Image&gt; m_image;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif // TMX_IMAGE_LAYER_H</span></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
 <div class="ttc" id="classtmx_1_1_image_layer_html_aefd5b07891da735c5141f69de20e7143"><div class="ttname"><a href="classtmx_1_1_image_layer.html#aefd5b07891da735c5141f69de20e7143">tmx::ImageLayer::ImageLayer</a></div><div class="ttdeci">ImageLayer(const std::string &amp;name, double opacity, bool visible)</div><div class="ttdoc">ImageLayer constructor. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:32</div></div>
 <div class="ttc" id="classtmx_1_1_image_html"><div class="ttname"><a href="classtmx_1_1_image.html">tmx::Image</a></div><div class="ttdoc">An image is an image file on the system. </div><div class="ttdef"><b>Definition:</b> Image.h:30</div></div>
-<div class="ttc" id="classtmx_1_1_image_layer_html_ab51c8f6c3ce15886f4ce9024397a0425"><div class="ttname"><a href="classtmx_1_1_image_layer.html#ab51c8f6c3ce15886f4ce9024397a0425">tmx::ImageLayer::accept</a></div><div class="ttdeci">virtual void accept(LayerVisitor &amp;visitor)</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
-<div class="ttc" id="classtmx_1_1_image_layer_html_a5ab034e9fcffe63b5412dbc17f6eb6f4"><div class="ttname"><a href="classtmx_1_1_image_layer.html#a5ab034e9fcffe63b5412dbc17f6eb6f4">tmx::ImageLayer::getImage</a></div><div class="ttdeci">const Image * getImage() const </div><div class="ttdoc">Get the image assigned to the layer. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:60</div></div>
-<div class="ttc" id="classtmx_1_1_image_layer_html_a5ad55ef9b12e094eda1980aabdd0fc0c"><div class="ttname"><a href="classtmx_1_1_image_layer.html#a5ad55ef9b12e094eda1980aabdd0fc0c">tmx::ImageLayer::~ImageLayer</a></div><div class="ttdeci">~ImageLayer()</div><div class="ttdoc">ImageLayer destructor. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:40</div></div>
-<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:27</div></div>
-<div class="ttc" id="classtmx_1_1_image_layer_html_a34a0e6300eec50e28dca6ca510fe9d79"><div class="ttname"><a href="classtmx_1_1_image_layer.html#a34a0e6300eec50e28dca6ca510fe9d79">tmx::ImageLayer::setImage</a></div><div class="ttdeci">void setImage(Image *image)</div><div class="ttdoc">Assign the image for the layer. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:51</div></div>
-<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:29</div></div>
+<div class="ttc" id="classtmx_1_1_image_layer_html_aeb7e3e131661d5aad59c57290f6a3645"><div class="ttname"><a href="classtmx_1_1_image_layer.html#aeb7e3e131661d5aad59c57290f6a3645">tmx::ImageLayer::setImage</a></div><div class="ttdeci">void setImage(std::unique_ptr&lt; Image &gt; image)</div><div class="ttdoc">Assign the image for the layer. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:44</div></div>
+<div class="ttc" id="classtmx_1_1_image_layer_html_a0c694e8c86c477ab2e93f33833864e36"><div class="ttname"><a href="classtmx_1_1_image_layer.html#a0c694e8c86c477ab2e93f33833864e36">tmx::ImageLayer::getImage</a></div><div class="ttdeci">const Image * getImage() const noexcept</div><div class="ttdoc">Get the image assigned to the layer. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:53</div></div>
+<div class="ttc" id="classtmx_1_1_layer_visitor_html"><div class="ttname"><a href="classtmx_1_1_layer_visitor.html">tmx::LayerVisitor</a></div><div class="ttdoc">A layer visitor is a visitor for layers in the visitor pattern. </div><div class="ttdef"><b>Definition:</b> LayerVisitor.h:28</div></div>
+<div class="ttc" id="classtmx_1_1_map_html"><div class="ttname"><a href="classtmx_1_1_map.html">tmx::Map</a></div><div class="ttdoc">A map is a set of tilesets and a set of different layers. </div><div class="ttdef"><b>Definition:</b> Map.h:63</div></div>
+<div class="ttc" id="classtmx_1_1_layer_html"><div class="ttname"><a href="classtmx_1_1_layer.html">tmx::Layer</a></div><div class="ttdoc">A layer is a layer in the whole map. </div><div class="ttdef"><b>Definition:</b> Layer.h:30</div></div>
 <div class="ttc" id="classtmx_1_1_image_layer_html"><div class="ttname"><a href="classtmx_1_1_image_layer.html">tmx::ImageLayer</a></div><div class="ttdoc">An image layer is a layer with a single image. </div><div class="ttdef"><b>Definition:</b> ImageLayer.h:27</div></div>
+<div class="ttc" id="classtmx_1_1_image_layer_html_a76a488591992fd478231894524679f34"><div class="ttname"><a href="classtmx_1_1_image_layer.html#a76a488591992fd478231894524679f34">tmx::ImageLayer::accept</a></div><div class="ttdeci">virtual void accept(const Map &amp;map, LayerVisitor &amp;visitor) const override</div><div class="ttdoc">Accept function in the visitor pattern. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

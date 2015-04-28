@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">libtmx
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.1</span>
    </div>
    <div id="projectbrief">an C++11 library for reading TMX files</div>
   </td>
@@ -74,19 +74,19 @@
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#a46c962dfe51f765e0f6c9472446fe81f">   40</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_cell.html#a46c962dfe51f765e0f6c9472446fe81f">getGID</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#a1e9c8d8cd073cc12dcedec82b4674c13">   40</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classtmx_1_1_cell.html#a1e9c8d8cd073cc12dcedec82b4674c13">getGID</a>() const noexcept {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">return</span> m_gid;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#ab264db6e279bb32e4021ee272738db2a">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#ab264db6e279bb32e4021ee272738db2a">isHorizontallyFlipped</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#a8948a125895d0bbb2d0cf9a2ffe5cd86">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#a8948a125895d0bbb2d0cf9a2ffe5cd86">isHorizontallyFlipped</a>() const noexcept {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> m_hflip;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#adb7f76abdcc3e6957d8f611ae5fd97c7">   58</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#adb7f76abdcc3e6957d8f611ae5fd97c7">isVerticallyFlipped</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#ac5fac374171bebac322821c572a2227b">   58</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#ac5fac374171bebac322821c572a2227b">isVerticallyFlipped</a>() const noexcept {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> m_vflip;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#a94a524d03960a98db75821f994603799">   67</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#a94a524d03960a98db75821f994603799">isDiagonallyFlipped</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classtmx_1_1_cell.html#aaa026cf4872812044cc28e3269d3776b">   67</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtmx_1_1_cell.html#aaa026cf4872812044cc28e3269d3776b">isDiagonallyFlipped</a>() const noexcept {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> m_dflip;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
@@ -101,17 +101,17 @@
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif // TMX_CELL_H</span></div>
-<div class="ttc" id="classtmx_1_1_cell_html_adb7f76abdcc3e6957d8f611ae5fd97c7"><div class="ttname"><a href="classtmx_1_1_cell.html#adb7f76abdcc3e6957d8f611ae5fd97c7">tmx::Cell::isVerticallyFlipped</a></div><div class="ttdeci">bool isVerticallyFlipped() const </div><div class="ttdoc">Tell whether the tile must be flipped vertically. </div><div class="ttdef"><b>Definition:</b> Cell.h:58</div></div>
-<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Base.h:22</div></div>
-<div class="ttc" id="classtmx_1_1_cell_html_ab264db6e279bb32e4021ee272738db2a"><div class="ttname"><a href="classtmx_1_1_cell.html#ab264db6e279bb32e4021ee272738db2a">tmx::Cell::isHorizontallyFlipped</a></div><div class="ttdeci">bool isHorizontallyFlipped() const </div><div class="ttdoc">Tell whether the tile must be flipped horizontally. </div><div class="ttdef"><b>Definition:</b> Cell.h:49</div></div>
-<div class="ttc" id="classtmx_1_1_cell_html_a94a524d03960a98db75821f994603799"><div class="ttname"><a href="classtmx_1_1_cell.html#a94a524d03960a98db75821f994603799">tmx::Cell::isDiagonallyFlipped</a></div><div class="ttdeci">bool isDiagonallyFlipped() const </div><div class="ttdoc">Tell whether the tile must be flipped diagonally. </div><div class="ttdef"><b>Definition:</b> Cell.h:67</div></div>
-<div class="ttc" id="classtmx_1_1_cell_html_a46c962dfe51f765e0f6c9472446fe81f"><div class="ttname"><a href="classtmx_1_1_cell.html#a46c962dfe51f765e0f6c9472446fe81f">tmx::Cell::getGID</a></div><div class="ttdeci">unsigned getGID() const </div><div class="ttdoc">Get the global id of the tile. </div><div class="ttdef"><b>Definition:</b> Cell.h:40</div></div>
+<div class="ttc" id="classtmx_1_1_cell_html_a8948a125895d0bbb2d0cf9a2ffe5cd86"><div class="ttname"><a href="classtmx_1_1_cell.html#a8948a125895d0bbb2d0cf9a2ffe5cd86">tmx::Cell::isHorizontallyFlipped</a></div><div class="ttdeci">bool isHorizontallyFlipped() const noexcept</div><div class="ttdoc">Tell whether the tile must be flipped horizontally. </div><div class="ttdef"><b>Definition:</b> Cell.h:49</div></div>
+<div class="ttc" id="namespacetmx_html"><div class="ttname"><a href="namespacetmx.html">tmx</a></div><div class="ttdoc">The namespace for all libtmx classes. </div><div class="ttdef"><b>Definition:</b> Adaptor.h:22</div></div>
+<div class="ttc" id="classtmx_1_1_cell_html_ac5fac374171bebac322821c572a2227b"><div class="ttname"><a href="classtmx_1_1_cell.html#ac5fac374171bebac322821c572a2227b">tmx::Cell::isVerticallyFlipped</a></div><div class="ttdeci">bool isVerticallyFlipped() const noexcept</div><div class="ttdoc">Tell whether the tile must be flipped vertically. </div><div class="ttdef"><b>Definition:</b> Cell.h:58</div></div>
+<div class="ttc" id="classtmx_1_1_cell_html_aaa026cf4872812044cc28e3269d3776b"><div class="ttname"><a href="classtmx_1_1_cell.html#aaa026cf4872812044cc28e3269d3776b">tmx::Cell::isDiagonallyFlipped</a></div><div class="ttdeci">bool isDiagonallyFlipped() const noexcept</div><div class="ttdoc">Tell whether the tile must be flipped diagonally. </div><div class="ttdef"><b>Definition:</b> Cell.h:67</div></div>
+<div class="ttc" id="classtmx_1_1_cell_html_a1e9c8d8cd073cc12dcedec82b4674c13"><div class="ttname"><a href="classtmx_1_1_cell.html#a1e9c8d8cd073cc12dcedec82b4674c13">tmx::Cell::getGID</a></div><div class="ttdeci">unsigned getGID() const noexcept</div><div class="ttdoc">Get the global id of the tile. </div><div class="ttdef"><b>Definition:</b> Cell.h:40</div></div>
 <div class="ttc" id="classtmx_1_1_cell_html"><div class="ttname"><a href="classtmx_1_1_cell.html">tmx::Cell</a></div><div class="ttdoc">A cell is a square on a map layer that is filled with a tile. </div><div class="ttdef"><b>Definition:</b> Cell.h:24</div></div>
 <div class="ttc" id="classtmx_1_1_cell_html_ae603fd8ca83695fe5c0eed20414e71cb"><div class="ttname"><a href="classtmx_1_1_cell.html#ae603fd8ca83695fe5c0eed20414e71cb">tmx::Cell::Cell</a></div><div class="ttdeci">Cell(unsigned gid, bool hflip=false, bool vflip=false, bool dflip=false)</div><div class="ttdoc">Cell constructor. </div><div class="ttdef"><b>Definition:</b> Cell.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 18:27:09 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 17:54:08 for libtmx by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
